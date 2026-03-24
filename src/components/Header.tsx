@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
 import Link from "next/link";
-import Logo from "./Logo";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -40,9 +40,13 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between lg:h-20">
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#0369A1] text-white">
-              <Logo className="h-5 w-5" />
-            </div>
+            <Image
+              src="/images/logo.png"
+              alt="OC CLIM"
+              width={36}
+              height={36}
+              className="h-9 w-9"
+            />
             <span className="text-lg font-bold tracking-tight text-[#0F172A]">
               OC <span className="text-[#0369A1]">CLIM</span>
             </span>

@@ -1,5 +1,5 @@
 import { MapPin, Clock, Mail, Phone, ArrowUp } from "lucide-react";
-import Logo from "./Logo";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -9,9 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="h-8 w-8 rounded-lg bg-[#0369A1] flex items-center justify-center text-white">
-                <Logo className="h-4 w-4" />
-              </div>
+              <Image src="/images/logo.png" alt="OC CLIM" width={32} height={32} className="h-8 w-8" />
               <span className="text-base font-bold text-white">
                 OC <span className="text-[#0EA5E9]">CLIM</span>
               </span>
