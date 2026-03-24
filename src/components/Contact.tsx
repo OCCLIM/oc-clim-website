@@ -67,7 +67,9 @@ export default function Contact() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
               <div className="absolute bottom-0 left-0 right-0 p-8">
-                <Image src="/images/logo.png" alt="OC CLIM" width={40} height={40} className="mb-4 brightness-0 invert" />
+                <div className="h-10 w-10 rounded-xl bg-white/15 backdrop-blur-sm flex items-center justify-center mb-4">
+                  <span className="text-sm font-extrabold text-white">OC</span>
+                </div>
                 <div className="space-y-3 text-sm text-white/80">
                   <div className="flex items-center gap-3">
                     <Phone className="h-4 w-4 text-white/50 shrink-0" />

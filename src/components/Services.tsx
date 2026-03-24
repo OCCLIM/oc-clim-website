@@ -1,6 +1,6 @@
 "use client";
 
-import { Wind, Flame, Wrench, AlertTriangle, ArrowRight } from "lucide-react";
+import { Wind, Flame, Wrench, AlertTriangle, ArrowRight, Snowflake, AirVent, Droplets, RefreshCw, Settings, Zap } from "lucide-react";
 import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 
@@ -26,12 +26,12 @@ const metiers = [
 ];
 
 const solutions = [
-  { icon: "❄️", title: "Split mural", desc: "Discret et performant" },
-  { icon: "🌬️", title: "Gainable", desc: "Intégré au faux-plafond" },
-  { icon: "🔥", title: "PAC Air/Eau", desc: "Chauffage & eau chaude" },
-  { icon: "♻️", title: "PAC Air/Air", desc: "Réversible chaud/froid" },
-  { icon: "🔧", title: "Entretien", desc: "Contrat annuel" },
-  { icon: "⚡", title: "Dépannage", desc: "Intervention 7j/7" },
+  { icon: Snowflake, title: "Split mural", desc: "Discret et performant" },
+  { icon: AirVent, title: "Gainable", desc: "Intégré au faux-plafond" },
+  { icon: Droplets, title: "PAC Air/Eau", desc: "Chauffage & eau chaude" },
+  { icon: RefreshCw, title: "PAC Air/Air", desc: "Réversible chaud/froid" },
+  { icon: Settings, title: "Entretien", desc: "Contrat annuel" },
+  { icon: Zap, title: "Dépannage", desc: "Intervention 7j/7" },
 ];
 
 export default function Services() {
@@ -97,17 +97,20 @@ export default function Services() {
           </ScrollReveal>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
-            {solutions.map((s, i) => (
-              <ScrollReveal key={s.title} delay={i * 80}>
-                <div className="group text-center p-6 rounded-2xl border border-[#E5E5E5] bg-white hover:border-[#111]/15 hover:shadow-lg transition-all duration-300 cursor-pointer">
-                  <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                    {s.icon}
+            {solutions.map((s, i) => {
+              const Icon = s.icon;
+              return (
+                <ScrollReveal key={s.title} delay={i * 80}>
+                  <div className="group text-center p-6 rounded-2xl border border-[#E5E5E5] bg-white hover:border-[#111]/15 hover:shadow-lg transition-all duration-300 cursor-pointer">
+                    <div className="mx-auto h-10 w-10 rounded-xl bg-[#F0F0F0] flex items-center justify-center mb-3 group-hover:bg-[#111] transition-colors duration-300">
+                      <Icon className="h-5 w-5 text-[#111] group-hover:text-white transition-colors duration-300" strokeWidth={1.8} />
+                    </div>
+                    <h3 className="text-sm font-bold text-[#111] mb-1">{s.title}</h3>
+                    <p className="text-xs text-[#999]">{s.desc}</p>
                   </div>
-                  <h3 className="text-sm font-bold text-[#111] mb-1">{s.title}</h3>
-                  <p className="text-xs text-[#999]">{s.desc}</p>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowDown, Phone } from "lucide-react";
+import { ArrowDown, Phone, Snowflake } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
@@ -36,7 +36,7 @@ export default function Hero() {
           {/* Badge */}
           <div className="mb-6 animate-fade-in">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 px-4 py-1.5 text-sm font-medium text-white/90">
-              <Image src="/images/logo.png" alt="" width={16} height={16} className="h-4 w-4" />
+              <Snowflake className="h-3.5 w-3.5" />
               Artisan certifié · Bordeaux Métropole
             </span>
           </div>
