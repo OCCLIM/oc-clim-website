@@ -67,8 +67,8 @@ export default function Contact() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
               <div className="absolute bottom-0 left-0 right-0 p-8">
-                <div className="h-10 w-10 rounded-xl bg-white/15 backdrop-blur-sm flex items-center justify-center mb-4">
-                  <span className="text-sm font-extrabold text-white">OC</span>
+                <div className="h-10 w-10 rounded-xl bg-white flex items-center justify-center mb-4 p-1.5">
+                  <Image src="/images/logo.png" alt="OC CLIM" width={28} height={28} className="h-7 w-7 object-contain" />
                 </div>
                 <div className="space-y-3 text-sm text-white/80">
                   <div className="flex items-center gap-3">

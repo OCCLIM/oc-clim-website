@@ -1,7 +1,7 @@
 "use client";
 
 import ScrollReveal from "./ScrollReveal";
-import { Wind } from "lucide-react";
+import Image from "next/image";
 
 export default function Mission() {
   return (
@@ -16,8 +16,8 @@ export default function Mission() {
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <ScrollReveal>
-          <div className="mx-auto mb-8 h-14 w-14 rounded-2xl border border-white/10 flex items-center justify-center">
-            <Wind className="h-7 w-7 text-white/30" strokeWidth={1.5} />
+          <div className="mx-auto mb-8 h-14 w-14 rounded-2xl bg-white flex items-center justify-center p-2">
+            <Image src="/images/logo.png" alt="OC CLIM" width={40} height={40} className="h-10 w-10 object-contain" />
           </div>
           <blockquote className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-snug">
             Offrir une prestation <span className="text-white/50">fiable</span> et{" "}
