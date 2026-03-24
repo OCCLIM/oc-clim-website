@@ -44,19 +44,20 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between lg:h-20">
           {/* Logo - toujours visible avec un fond blanc rond sur le hero noir */}
-          <Link href="/" className="flex items-center gap-2.5">
+          <Link href="/" className="flex items-center gap-3">
             <div className={`flex items-center justify-center rounded-full transition-all duration-300 ${
-              showWhiteBg ? "h-11 w-11" : "h-12 w-12 bg-white shadow-md"
+              showWhiteBg ? "h-14 w-14" : "h-14 w-14 bg-white shadow-md"
             }`}>
               <Image
                 src="/images/logo.png"
                 alt="OC CLIM"
-                width={44}
-                height={44}
-                className={showWhiteBg ? "h-11 w-11" : "h-9 w-9"}
+                width={56}
+                height={56}
+                className="h-14 w-14"
+                priority
               />
             </div>
-            <span className={`text-xl font-extrabold tracking-tight transition-colors duration-300 ${
+            <span className={`text-2xl font-extrabold tracking-tight transition-colors duration-300 ${
               showWhiteBg ? "text-[#111111]" : "text-white"
             }`}>
               OC CLIM
