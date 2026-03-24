@@ -15,9 +15,9 @@ const reasons = [
   },
   {
     icon: Award,
-    title: "Expertise certifiée",
+    title: "Expertise reconnue",
     description: "Diplômé Bac Pro TFCA, Can maîtrise chaque aspect des systèmes climatiques et thermiques.",
-    accent: "Certifié",
+    accent: "Pro",
   },
   {
     icon: Banknote,

@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import BrandMarquee from "@/components/BrandMarquee";
 import Stats from "@/components/Stats";
 import Services from "@/components/Services";
-import Aides from "@/components/Aides";
+
 import Mission from "@/components/Mission";
 import Intervention from "@/components/Intervention";
 import Realisations from "@/components/Realisations";
@@ -23,7 +23,7 @@ export default function Home() {
         <BrandMarquee />
         <Stats />
         <Services />
-        <Aides />
+
         <Mission />
         <Intervention />
         <Realisations />

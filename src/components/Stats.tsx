@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 
 const stats = [
-  { value: 150, suffix: "+", label: "Installations réalisées" },
+  { value: 150, suffix: "+", label: "Interventions réalisées" },
   { value: 5, suffix: "/5", label: "Avis clients (AlloVoisins)" },
   { value: 7, suffix: "j/7", label: "Disponibilité" },
   { value: 22, suffix: " min", label: "Temps de réponse moyen" },

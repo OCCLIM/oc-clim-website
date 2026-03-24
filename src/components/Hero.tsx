@@ -6,21 +6,25 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-end overflow-hidden">
-      {/* Background image - full screen like K2 */}
-      <div className="absolute inset-0">
-        <Image
-          src="/images/projets/04-gainable-mitsubishi.jpg"
-          alt="Installation climatisation OC CLIM"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
+      {/* Background - dark with logo watermark */}
+      <div className="absolute inset-0 bg-[#0a0a0a]">
+        {/* Logo as giant watermark */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+          <Image
+            src="/images/logo.png"
+            alt=""
+            width={700}
+            height={700}
+            className="h-[500px] w-[500px] sm:h-[600px] sm:w-[600px] lg:h-[700px] lg:w-[700px] opacity-[0.04]"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
       </div>
 
-      {/* Animated decorative circle (K2-style) */}
+      {/* Animated decorative circle */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-        <svg width="600" height="600" className="animate-rotate-dash opacity-10">
+        <svg width="600" height="600" className="animate-rotate-dash opacity-[0.06]">
           <circle
             cx="300" cy="300" r="280"
             fill="none"
@@ -37,7 +41,7 @@ export default function Hero() {
           <div className="mb-6 animate-fade-in">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 px-4 py-1.5 text-sm font-medium text-white/90">
               <Image src="/images/logo.png" alt="" width={14} height={14} className="h-3.5 w-3.5 rounded-sm bg-white p-[1px]" />
-              Artisan certifié · Bordeaux Métropole
+              Climatisation & Pompes à chaleur · Bordeaux Métropole
             </span>
           </div>
 

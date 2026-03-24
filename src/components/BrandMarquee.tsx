@@ -145,7 +145,7 @@ export default function BrandMarquee() {
 
               <div className="mt-6 pt-5 border-t border-[#eee] flex items-center justify-between">
                 <p className="text-xs text-[#999]">
-                  OC CLIM — Installateur certifié
+                  OC CLIM — Installateur partenaire
                 </p>
                 <a
                   href="#contact"
