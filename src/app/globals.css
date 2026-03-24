@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-primary: #0F172A;
-  --color-primary-light: #1E293B;
-  --color-secondary: #0369A1;
-  --color-secondary-light: #0EA5E9;
-  --color-accent: #0369A1;
-  --color-background: #F8FAFC;
-  --color-foreground: #020617;
+  --color-primary: #111111;
+  --color-primary-light: #222222;
+  --color-secondary: #333333;
+  --color-secondary-light: #555555;
+  --color-accent: #111111;
+  --color-background: #FAFAFA;
+  --color-foreground: #111111;
   --color-card: #FFFFFF;
-  --color-muted: #E8ECF1;
-  --color-muted-fg: #64748B;
-  --color-border: #E2E8F0;
+  --color-muted: #F0F0F0;
+  --color-muted-fg: #777777;
+  --color-border: #E5E5E5;
   --font-heading: var(--font-poppins), system-ui, sans-serif;
   --font-body: var(--font-inter), system-ui, sans-serif;
 }
@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 .delay-500 { animation-delay: 0.5s; }
 
 .text-gradient {
-  background: linear-gradient(135deg, #0369A1 0%, #0EA5E9 100%);
+  background: linear-gradient(135deg, #333333 0%, #888888 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
 
-::selection { background: #0369A1; color: white; }
+::selection { background: #111111; color: white; }
 
 /* 3D hover card effect */
 .card-3d {

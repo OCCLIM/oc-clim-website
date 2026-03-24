@@ -36,13 +36,13 @@ export default function Realisations() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <p className="text-sm font-semibold uppercase tracking-wider text-[#0369A1] mb-3">
+          <p className="text-sm font-semibold uppercase tracking-wider text-[#111111] mb-3">
             Nos réalisations
           </p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#111111] leading-tight">
             Des projets concrets, des clients satisfaits
           </h2>
-          <p className="mt-4 text-lg text-[#64748B]">
+          <p className="mt-4 text-lg text-[#777777]">
             Découvrez quelques-unes de nos installations réalisées sur Bordeaux Métropole.
           </p>
         </div>
@@ -64,9 +64,9 @@ export default function Realisations() {
                 sizes="(max-width: 768px) 50vw, 25vw"
               />
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <span className="inline-block text-[10px] font-bold uppercase tracking-wider bg-[#0369A1] text-white px-2 py-0.5 rounded mb-1">
+                <span className="inline-block text-[10px] font-bold uppercase tracking-wider bg-[#111111] text-white px-2 py-0.5 rounded mb-1">
                   {p.tag}
                 </span>
                 <p className="text-white text-xs font-medium leading-tight">{p.title}</p>

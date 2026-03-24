@@ -33,17 +33,17 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 sm:py-32 bg-[#F8FAFC]">
+    <section id="services" className="py-24 sm:py-32 bg-[#FAFAFA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-2xl mb-16">
-          <p className="text-sm font-semibold uppercase tracking-wider text-[#0369A1] mb-3">
+          <p className="text-sm font-semibold uppercase tracking-wider text-[#111111] mb-3">
             Nos services
           </p>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#111111] leading-tight">
             Des solutions complètes pour votre confort
           </h2>
-          <p className="mt-4 text-lg text-[#64748B] leading-relaxed">
+          <p className="mt-4 text-lg text-[#777777] leading-relaxed">
             De l'installation au dépannage, OC CLIM vous accompagne avec un service
             fiable, personnalisé et transparent.
           </p>
@@ -56,22 +56,22 @@ export default function Services() {
             return (
               <div
                 key={service.title}
-                className="group bg-white rounded-2xl p-8 border border-[#E2E8F0] hover:border-[#0369A1]/20 hover:shadow-lg transition-all duration-300"
+                className="group bg-white rounded-2xl p-8 border border-[#E5E5E5] hover:border-[#111111]/20 hover:shadow-lg transition-all duration-300"
               >
                 {/* Icon + number */}
                 <div className="flex items-start justify-between mb-6">
-                  <div className="h-12 w-12 rounded-xl bg-[#0369A1]/10 flex items-center justify-center group-hover:bg-[#0369A1] transition-colors duration-300">
-                    <Icon className="h-5 w-5 text-[#0369A1] group-hover:text-white transition-colors duration-300" strokeWidth={2} />
+                  <div className="h-12 w-12 rounded-xl bg-[#111111]/10 flex items-center justify-center group-hover:bg-[#111111] transition-colors duration-300">
+                    <Icon className="h-5 w-5 text-[#111111] group-hover:text-white transition-colors duration-300" strokeWidth={2} />
                   </div>
-                  <span className="text-5xl font-extrabold text-[#E2E8F0] group-hover:text-[#0369A1]/10 transition-colors">
+                  <span className="text-5xl font-extrabold text-[#E5E5E5] group-hover:text-[#111111]/10 transition-colors">
                     0{i + 1}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-bold text-[#0F172A] mb-3">
+                <h3 className="text-xl font-bold text-[#111111] mb-3">
                   {service.title}
                 </h3>
-                <p className="text-[#64748B] leading-relaxed mb-5">
+                <p className="text-[#777777] leading-relaxed mb-5">
                   {service.description}
                 </p>
 
@@ -80,14 +80,14 @@ export default function Services() {
                   {service.features.map((f) => (
                     <span
                       key={f}
-                      className="text-xs font-medium bg-[#F1F5F9] text-[#334155] px-2.5 py-1 rounded-md"
+                      className="text-xs font-medium bg-[#F5F5F5] text-[#444444] px-2.5 py-1 rounded-md"
                     >
                       {f}
                     </span>
                   ))}
                 </div>
 
-                <a href="#contact" className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0369A1] hover:gap-2.5 transition-all">
+                <a href="#contact" className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#111111] hover:gap-2.5 transition-all">
                   Demander un devis
                   <ArrowRight className="h-3.5 w-3.5" />
                 </a>
