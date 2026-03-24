@@ -20,18 +20,34 @@ export default function Contact() {
     nom: "", telephone: "", email: "", service: "", message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setForm({ nom: "", telephone: "", email: "", service: "", message: "" });
-    }, 5000);
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Erreur serveur");
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setForm({ nom: "", telephone: "", email: "", service: "", message: "" });
+      }, 6000);
+    } catch {
+      setError("Une erreur est survenue. Appelez-nous directement au 07 67 11 75 30.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   const inputClass =
@@ -132,12 +148,25 @@ export default function Contact() {
                     <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-[#999] mb-2">Message</label>
                     <textarea id="message" name="message" rows={4} required value={form.message} onChange={handleChange} placeholder="Décrivez votre projet..." className={`${inputClass} resize-none`} />
                   </div>
+                  {error && (
+                    <p className="text-red-500 text-sm text-center bg-red-50 rounded-lg py-3">{error}</p>
+                  )}
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 bg-[#111] text-white font-bold py-4 rounded-lg text-sm uppercase tracking-wide hover:bg-[#333] transition-colors"
+                    disabled={loading}
+                    className="w-full flex items-center justify-center gap-2 bg-[#111] text-white font-bold py-4 rounded-lg text-sm uppercase tracking-wide hover:bg-[#333] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <Send className="h-4 w-4" />
-                    Envoyer ma demande
+                    {loading ? (
+                      <>
+                        <div className="h-4 w-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        Envoi en cours...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="h-4 w-4" />
+                        Envoyer ma demande
+                      </>
+                    )}
                   </button>
                   <p className="text-center text-xs text-[#BBB]">
                     Devis 100% gratuit · Réponse sous 24h · Sans engagement
