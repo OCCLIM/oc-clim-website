@@ -28,8 +28,8 @@ const reasons = [
   {
     icon: MapPin,
     title: "Proximité",
-    description: "Basé à Cestas, nous intervenons sur toute la métropole bordelaise. Un vrai artisan local.",
-    accent: "33610",
+    description: "Nous intervenons sur toute la métropole bordelaise et ses alentours. Un vrai artisan local, toujours proche de vous.",
+    accent: "33",
   },
   {
     icon: Heart,

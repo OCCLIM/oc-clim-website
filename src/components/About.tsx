@@ -63,8 +63,7 @@ export default function About() {
                 </p>
                 <p>
                   <strong className="text-[#111]">Can Oruc</strong>, fondateur et gérant, est technicien
-                  diplômé d'un Bac Pro TFCA. Basé à <strong className="text-[#111]">Cestas (33610)</strong>,
-                  il intervient sur toute la métropole bordelaise avec réactivité et professionnalisme.
+                  diplômé d'un Bac Pro TFCA. Il intervient sur toute la <strong className="text-[#111]">métropole bordelaise</strong> et ses alentours avec réactivité et professionnalisme.
                 </p>
                 <p>
                   Un interlocuteur unique, des conseils honnêtes, et un travail soigné. Pas de sous-traitance
@@ -77,7 +76,7 @@ export default function About() {
                 {[
                   { icon: GraduationCap, text: "Bac Pro TFCA" },
                   { icon: Shield, text: "Garantie décennale" },
-                  { icon: MapPin, text: "Cestas (33610)" },
+                  { icon: MapPin, text: "Bordeaux Métropole" },
                   { icon: CheckCircle, text: "SIRET vérifiable" },
                 ].map((c) => {
                   const Icon = c.icon;

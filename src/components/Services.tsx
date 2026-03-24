@@ -13,8 +13,8 @@ const metiers = [
   },
   {
     icon: Flame,
-    title: "Pompes à chaleur",
-    description: "Solutions Air/Eau et Air/Air haute performance. Réduisez votre facture énergétique jusqu'à 70 %.",
+    title: "Chauffe-eau thermodynamique",
+    description: "Production d'eau chaude sanitaire ultra économique. Jusqu'à 70 % d'économie sur votre facture grâce à l'énergie de l'air.",
     image: "/images/projets/01-thermo-ariston.jpg",
   },
   {

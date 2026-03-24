@@ -61,7 +61,7 @@ export async function POST(req: NextRequest) {
             <p style="margin:0 0 12px">En attendant, n'hésitez pas à nous appeler directement :</p>
             <p style="margin:0 0 20px"><a href="tel:0767117530" style="background:#111;color:white;padding:10px 20px;border-radius:8px;text-decoration:none;font-weight:600;display:inline-block">07 67 11 75 30</a></p>
             <hr style="border:none;border-top:1px solid #e5e5e5;margin:16px 0">
-            <p style="color:#999;font-size:12px;margin:0">OC CLIM — Votre confort, notre priorité<br>2B Chemin du Chibaley, 33610 Cestas</p>
+            <p style="color:#999;font-size:12px;margin:0">OC CLIM — Votre confort, notre priorité<br>Bordeaux Métropole & alentours</p>
           </div>
         </div>
       `,

@@ -28,7 +28,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-white/30 mb-5">Services</h3>
             <ul className="space-y-2.5">
-              {["Climatisation", "Pompe à chaleur", "Gainable", "Entretien", "Dépannage"].map((s) => (
+              {["Climatisation", "Pompe à chaleur", "Thermodynamique", "Entretien", "Dépannage"].map((s) => (
                 <li key={s}>
                   <a href="#services" className="text-sm hover:text-white transition-colors">{s}</a>
                 </li>
@@ -67,9 +67,9 @@ export default function Footer() {
                 <Mail className="h-4 w-4 shrink-0 text-white/25" />
                 <a href="mailto:occlim@outlook.com" className="hover:text-white transition-colors">occlim@outlook.com</a>
               </li>
-              <li className="flex items-start gap-2.5">
-                <MapPin className="h-4 w-4 mt-0.5 shrink-0 text-white/25" />
-                <span>2B Chemin du Chibaley<br />33610 Cestas</span>
+              <li className="flex items-center gap-2.5">
+                <MapPin className="h-4 w-4 shrink-0 text-white/25" />
+                <span>Bordeaux Métropole & alentours</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Clock className="h-4 w-4 shrink-0 text-white/25" />
