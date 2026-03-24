@@ -1,11 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Phone, Menu, X, Wind } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 import Link from "next/link";
+import Logo from "./Logo";
 
 const navLinks = [
   { label: "Services", href: "#services" },
+  { label: "Réalisations", href: "#realisations" },
   { label: "À propos", href: "#a-propos" },
   { label: "Engagements", href: "#pourquoi-nous" },
   { label: "Avis", href: "#avis" },
@@ -38,8 +40,8 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between lg:h-20">
           <Link href="/" className="flex items-center gap-2.5">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#0369A1]">
-              <Wind className="h-[18px] w-[18px] text-white" strokeWidth={2.5} />
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#0369A1] text-white">
+              <Logo className="h-5 w-5" />
             </div>
             <span className="text-lg font-bold tracking-tight text-[#0F172A]">
               OC <span className="text-[#0369A1]">CLIM</span>
@@ -59,11 +61,11 @@ export default function Header() {
           </nav>
 
           <a
-            href="#contact"
+            href="tel:0767117530"
             className="hidden lg:inline-flex items-center gap-2 rounded-lg bg-[#0369A1] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-[#0F172A]"
           >
             <Phone className="h-3.5 w-3.5" />
-            Devis gratuit
+            07 67 11 75 30
           </a>
 
           <button
@@ -92,12 +94,12 @@ export default function Header() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="tel:0767117530"
                 onClick={() => setOpen(false)}
                 className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-[#0369A1] px-5 py-3 text-sm font-semibold text-white"
               >
                 <Phone className="h-4 w-4" />
-                Devis gratuit
+                07 67 11 75 30
               </a>
             </nav>
           </div>

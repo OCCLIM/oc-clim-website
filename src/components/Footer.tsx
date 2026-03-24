@@ -1,4 +1,5 @@
-import { Wind, MapPin, Clock, Mail, Phone, ArrowUp } from "lucide-react";
+import { MapPin, Clock, Mail, Phone, ArrowUp } from "lucide-react";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
@@ -8,16 +9,19 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="h-8 w-8 rounded-lg bg-[#0369A1] flex items-center justify-center">
-                <Wind className="h-4 w-4 text-white" />
+              <div className="h-8 w-8 rounded-lg bg-[#0369A1] flex items-center justify-center text-white">
+                <Logo className="h-4 w-4" />
               </div>
               <span className="text-base font-bold text-white">
                 OC <span className="text-[#0EA5E9]">CLIM</span>
               </span>
             </div>
-            <p className="text-sm leading-relaxed">
-              Spécialiste en climatisation et pompes à chaleur sur Bordeaux
-              Métropole. Votre artisan de confiance depuis 2024.
+            <p className="text-sm leading-relaxed mb-4">
+              Votre confort, notre priorité. Spécialiste en climatisation et
+              pompes à chaleur sur Bordeaux Métropole depuis 2024.
+            </p>
+            <p className="text-sm">
+              <a href="https://occlim.fr" className="text-[#0EA5E9] hover:underline">occlim.fr</a>
             </p>
           </div>
 
@@ -27,9 +31,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {["Climatisation", "Pompe à chaleur", "Entretien", "Dépannage"].map((s) => (
                 <li key={s}>
-                  <a href="#services" className="text-sm hover:text-[#0EA5E9] transition-colors">
-                    {s}
-                  </a>
+                  <a href="#services" className="text-sm hover:text-[#0EA5E9] transition-colors">{s}</a>
                 </li>
               ))}
             </ul>
@@ -42,23 +44,30 @@ export default function Footer() {
               {[
                 { label: "Accueil", href: "#" },
                 { label: "Services", href: "#services" },
+                { label: "Réalisations", href: "#realisations" },
                 { label: "À propos", href: "#a-propos" },
                 { label: "Avis", href: "#avis" },
                 { label: "Contact", href: "#contact" },
               ].map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm hover:text-[#0EA5E9] transition-colors">
-                    {link.label}
-                  </a>
+                  <a href={link.href} className="text-sm hover:text-[#0EA5E9] transition-colors">{link.label}</a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Info */}
+          {/* Contact */}
           <div>
-            <h3 className="text-white font-semibold text-sm mb-4">Informations</h3>
+            <h3 className="text-white font-semibold text-sm mb-4">Contact</h3>
             <ul className="space-y-2.5 text-sm">
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 shrink-0 text-[#0EA5E9]" />
+                <a href="tel:0767117530" className="hover:text-[#0EA5E9] transition-colors">07 67 11 75 30</a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail className="h-4 w-4 shrink-0 text-[#0EA5E9]" />
+                <a href="mailto:occlim@outlook.com" className="hover:text-[#0EA5E9] transition-colors">occlim@outlook.com</a>
+              </li>
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0 text-[#0EA5E9]" />
                 <span>2B Chemin du Chibaley<br />33610 Cestas</span>
@@ -66,10 +75,6 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <Clock className="h-4 w-4 shrink-0 text-[#0EA5E9]" />
                 <span>7j/7 — Week-ends inclus</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 shrink-0 text-[#0EA5E9]" />
-                <a href="#contact" className="hover:text-[#0EA5E9] transition-colors">Contactez-nous</a>
               </li>
               <li className="pt-1 text-xs text-slate-500">
                 SIRET : 987 418 076 00012<br />
@@ -80,7 +85,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom */}
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex items-center justify-between">
           <p className="text-xs text-slate-500">

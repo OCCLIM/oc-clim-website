@@ -55,9 +55,10 @@ export default function Contact() {
           {/* Left: info */}
           <div className="lg:col-span-2 space-y-4">
             {[
+              { icon: Phone, title: "Téléphone", lines: ["07 67 11 75 30", "Réponse rapide"] },
+              { icon: Mail, title: "Email", lines: ["occlim@outlook.com"] },
               { icon: MapPin, title: "Adresse", lines: ["2B Chemin du Chibaley", "33610 Cestas"] },
               { icon: Clock, title: "Disponibilité", lines: ["7 jours sur 7", "Week-ends et jours fériés"] },
-              { icon: Phone, title: "Réactivité", lines: ["Réponse sous 24h", "Devis gratuit"] },
             ].map((card) => {
               const Icon = card.icon;
               return (
