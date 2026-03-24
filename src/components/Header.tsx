@@ -45,10 +45,10 @@ export default function Header() {
               alt="OC CLIM"
               width={36}
               height={36}
-              className="h-9 w-9"
+              className={`h-9 w-9 transition-all duration-300 ${scrolled ? "" : "brightness-0 invert"}`}
             />
-            <span className="text-lg font-bold tracking-tight text-[#111111]">
-              OC <span className="text-[#111111]">CLIM</span>
+            <span className={`text-lg font-bold tracking-tight transition-colors duration-300 ${scrolled ? "text-[#111111]" : "text-white"}`}>
+              OC CLIM
             </span>
           </Link>
 
@@ -57,7 +57,11 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="px-3.5 py-2 text-[13px] font-medium text-[#444444] hover:text-[#111111] transition-colors rounded-md hover:bg-[#111111]/5"
+                className={`px-3.5 py-2 text-[13px] font-medium transition-colors rounded-md ${
+                  scrolled
+                    ? "text-[#444444] hover:text-[#111111] hover:bg-[#111111]/5"
+                    : "text-white/80 hover:text-white hover:bg-white/10"
+                }`}
               >
                 {link.label}
               </a>
@@ -66,7 +70,11 @@ export default function Header() {
 
           <a
             href="tel:0767117530"
-            className="hidden lg:inline-flex items-center gap-2 rounded-lg bg-[#111111] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-[#111111]"
+            className={`hidden lg:inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-all ${
+              scrolled
+                ? "bg-[#111111] text-white hover:bg-[#333333]"
+                : "bg-white text-[#111111] hover:bg-white/90"
+            }`}
           >
             <Phone className="h-3.5 w-3.5" />
             07 67 11 75 30
@@ -74,7 +82,9 @@ export default function Header() {
 
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden flex h-9 w-9 items-center justify-center rounded-md text-[#111111] hover:bg-slate-100"
+            className={`lg:hidden flex h-9 w-9 items-center justify-center rounded-md transition-colors ${
+              scrolled ? "text-[#111111] hover:bg-slate-100" : "text-white hover:bg-white/10"
+            }`}
             aria-label={open ? "Fermer" : "Menu"}
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
