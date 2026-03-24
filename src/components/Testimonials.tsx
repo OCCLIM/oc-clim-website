@@ -55,7 +55,7 @@ export default function Testimonials() {
               ))}
             </div>
             <span className="text-[#a8bcd2] text-sm font-medium">
-              5/5 sur AlloVoisins &middot; Avis vérifiés
+              5/5 sur AlloVoisins · Avis vérifiés
             </span>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function Testimonials() {
 
               {/* Text */}
               <p className="text-[#a8bcd2] leading-relaxed mb-8 text-[15px]">
-                &laquo;&nbsp;{t.text}&nbsp;&raquo;
+                « {t.text} »
               </p>
 
               {/* Author */}

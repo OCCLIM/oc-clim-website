@@ -53,7 +53,7 @@ export default function Services() {
             <span className="text-gradient">un seul interlocuteur.</span>
           </h2>
           <p className="mt-5 text-lg text-[#5a7394] leading-relaxed max-w-2xl">
-            De l&apos;installation au dépannage, OC&nbsp;CLIM vous accompagne
+            De l'installation au dépannage, OC CLIM vous accompagne
             avec un service fiable et personnalisé. Chaque projet est unique,
             chaque solution est sur-mesure.
           </p>

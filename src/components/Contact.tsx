@@ -109,7 +109,7 @@ export default function Contact() {
             <div className="bg-white rounded-2xl border border-[#e5eef7] overflow-hidden shadow-[0_2px_20px_rgba(30,58,95,0.04)] flex-1 min-h-[200px]">
               <div className="h-full flex flex-col items-center justify-center p-6 text-center bg-[#f0f6ff]">
                 <MapPin className="h-8 w-8 text-[#5b9bd5] mb-3" />
-                <p className="font-bold text-[#1e3a5f]">Zone d&apos;intervention</p>
+                <p className="font-bold text-[#1e3a5f]">Zone d'intervention</p>
                 <p className="text-sm text-[#5a7394] mt-1">
                   Cestas, Bordeaux, Pessac, Talence,
                   <br />
@@ -228,7 +228,7 @@ export default function Contact() {
                 </button>
 
                 <p className="text-center text-xs text-[#a8bcd2]">
-                  Devis 100% gratuit &middot; Réponse sous 24h &middot; Sans engagement
+                  Devis 100% gratuit · Réponse sous 24h · Sans engagement
                 </p>
               </form>
             )}

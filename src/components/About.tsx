@@ -41,21 +41,21 @@ export default function About() {
           <div className="lg:col-span-3">
             <div className="prose prose-lg max-w-none text-[#5a7394] leading-relaxed space-y-5">
               <p className="text-xl">
-                Derrière <strong className="text-[#1e3a5f]">OC&nbsp;CLIM</strong>, il y a une
-                conviction simple&nbsp;: chacun mérite un air sain et un confort
+                Derrière <strong className="text-[#1e3a5f]">OC CLIM</strong>, il y a une
+                conviction simple : chacun mérite un air sain et un confort
                 thermique optimal chez soi.
               </p>
               <p>
                 <strong className="text-[#1e3a5f]">Can Oruc</strong>, fondateur et gérant,
-                est un technicien diplômé d&apos;un Bac&nbsp;Pro TFCA
-                (Technicien du Froid et du Conditionnement de l&apos;Air). Basé
-                à <strong className="text-[#1e3a5f]">Cestas&nbsp;(33610)</strong>, il intervient
+                est un technicien diplômé d'un Bac Pro TFCA
+                (Technicien du Froid et du Conditionnement de l'Air). Basé
+                à <strong className="text-[#1e3a5f]">Cestas (33610)</strong>, il intervient
                 sur toute la métropole bordelaise avec réactivité et professionnalisme.
               </p>
               <p>
-                Ce qui fait la différence&nbsp;? Un interlocuteur unique, des
-                conseils honn&ecirc;tes, et un travail soigné. Pas de
-                sous-traitance, pas d&apos;intermédiaire &mdash; c&apos;est Can
+                Ce qui fait la différence ? Un interlocuteur unique, des
+                conseils honnêtes, et un travail soigné. Pas de
+                sous-traitance, pas d'intermédiaire — c'est Can
                 qui étudie votre projet, réalise les travaux et assure le
                 suivi.
               </p>
@@ -105,7 +105,7 @@ export default function About() {
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <CheckCircle className="h-4 w-4 text-[#7bb3e0] shrink-0" />
-                  <span className="text-white/85">SIRET&nbsp;: 987&nbsp;418&nbsp;076&nbsp;00012</span>
+                  <span className="text-white/85">SIRET : 987 418 076 00012</span>
                 </div>
               </div>
             </div>

@@ -54,10 +54,10 @@ export default function WhyUs() {
             Nos engagements
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1e3a5f] leading-tight">
-            Pourquoi nous faire confiance&nbsp;?
+            Pourquoi nous faire confiance ?
           </h2>
           <p className="mt-5 text-lg text-[#5a7394] leading-relaxed">
-            OC&nbsp;CLIM, c&apos;est la promesse d&apos;un service humain,
+            OC CLIM, c'est la promesse d'un service humain,
             professionnel et sans compromis.
           </p>
         </div>

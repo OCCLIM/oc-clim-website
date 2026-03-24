@@ -46,7 +46,7 @@ export default function Hero() {
             <div className="animate-fade-in-up">
               <div className="inline-flex items-center gap-2.5 rounded-full border border-[#5b9bd5]/20 bg-[#5b9bd5]/10 px-4 py-2 text-sm font-medium text-[#7bb3e0] backdrop-blur-sm">
                 <Wind className="h-4 w-4" />
-                Artisan certifié &middot; Cestas & Bordeaux Métropole
+                Artisan certifié · Cestas & Bordeaux Métropole
               </div>
             </div>
 
@@ -65,8 +65,8 @@ export default function Hero() {
             {/* Story paragraph */}
             <p className="mt-7 max-w-lg text-lg leading-relaxed text-[#a8bcd2] animate-fade-in-up delay-200">
               Fondée par <span className="font-semibold text-white">Can Oruc</span>, technicien
-              diplômé et passionné, OC&nbsp;CLIM vous accompagne dans
-              l&apos;installation, l&apos;entretien et le dépannage de vos systèmes
+              diplômé et passionné, OC CLIM vous accompagne dans
+              l'installation, l'entretien et le dépannage de vos systèmes
               de <span className="font-semibold text-white">climatisation</span> et{" "}
               <span className="font-semibold text-white">pompes à chaleur</span>.
             </p>

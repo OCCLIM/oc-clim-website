@@ -98,7 +98,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Clock className="w-4 h-4 shrink-0 text-[#5b9bd5]" />
-                <span>7j/7 &mdash; Week-ends et jours fériés</span>
+                <span>7j/7 — Week-ends et jours fériés</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 shrink-0 text-[#5b9bd5]" />
@@ -107,7 +107,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="pt-2 text-xs text-[#5b9bd5]/50">
-                SIRET&nbsp;: 987&nbsp;418&nbsp;076&nbsp;00012
+                SIRET : 987 418 076 00012
                 <br />
                 Garantie décennale
               </li>
@@ -120,7 +120,7 @@ export default function Footer() {
       <div className="border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-[#5b9bd5]/40">
-            &copy; {new Date().getFullYear()} OC CLIM &mdash; Can Oruc. Tous droits réservés.
+            © {new Date().getFullYear()} OC CLIM — Can Oruc. Tous droits réservés.
           </p>
           <a
             href="#"

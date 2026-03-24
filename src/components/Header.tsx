@@ -145,7 +145,7 @@ export default function Header() {
               Devis gratuit
             </a>
             <p className="mt-3 text-center text-xs text-[#5b9bd5]/60">
-              7j/7 &middot; Bordeaux & Cestas
+              7j/7 · Bordeaux & Cestas
             </p>
           </div>
         </div>
