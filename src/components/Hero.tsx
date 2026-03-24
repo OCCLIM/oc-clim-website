@@ -1,16 +1,19 @@
 "use client";
 
-import { ArrowRight, Phone, Shield, Star, CheckCircle } from "lucide-react";
+import { ArrowRight, Phone, Star, Shield, Clock } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#0f1e30] via-[#152a45] to-[#1e3a5f] pt-24 lg:pt-0">
-      {/* Background elements */}
+      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-32 -left-32 h-[500px] w-[500px] rounded-full bg-[#0369A1]/10 blur-[120px]" />
-        <div className="absolute top-1/3 -right-24 h-[400px] w-[400px] rounded-full bg-[#0EA5E9]/8 blur-[100px]" />
-        <div className="absolute -bottom-16 left-1/3 h-[300px] w-[300px] rounded-full bg-[#0369A1]/6 blur-[80px]" />
+        {/* Gradient orbs */}
+        <div className="absolute -top-32 -left-32 h-[500px] w-[500px] rounded-full bg-[#5b9bd5]/10 blur-[120px] animate-float" />
+        <div className="absolute top-1/3 -right-24 h-[400px] w-[400px] rounded-full bg-[#4a90c2]/10 blur-[100px] animate-float" style={{ animationDelay: "2s" }} />
+        <div className="absolute -bottom-16 left-1/3 h-[300px] w-[300px] rounded-full bg-[#5b9bd5]/8 blur-[80px] animate-float" style={{ animationDelay: "4s" }} />
+
+        {/* Subtle grid */}
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -18,31 +21,50 @@ export default function Hero() {
             backgroundSize: "80px 80px",
           }}
         />
+
+        {/* Floating particles */}
+        {[15, 25, 40, 55, 70, 85].map((left, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full bg-[#5b9bd5]/20"
+            style={{
+              left: `${left}%`,
+              bottom: "-10px",
+              width: `${3 + i}px`,
+              height: `${3 + i}px`,
+              animation: `particle-float ${12 + i * 3}s linear infinite`,
+              animationDelay: `${i * 2}s`,
+            }}
+          />
+        ))}
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-16 items-center min-h-screen py-20 lg:py-0">
-          {/* Left: storytelling */}
+          {/* Left column: storytelling content */}
           <div className="flex flex-col justify-center">
+            {/* Intro tag */}
             <div className="animate-fade-in-up">
-              <span className="inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-[#0EA5E9] backdrop-blur-sm">
-                <CheckCircle className="h-4 w-4" />
+              <div className="inline-flex items-center gap-2.5 rounded-full border border-[#5b9bd5]/20 bg-[#5b9bd5]/10 px-4 py-2 text-sm font-medium text-[#7bb3e0] backdrop-blur-sm">
+                <Image src="/images/logo.png" alt="" width={18} height={18} className="h-[18px] w-[18px]" />
                 Artisan certifié · Cestas & Bordeaux Métropole
-              </span>
+              </div>
             </div>
 
+            {/* Main headline */}
             <h1 className="mt-8 animate-fade-in-up delay-100">
               <span className="block text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08] tracking-tight text-white">
                 Votre confort,
               </span>
               <span className="block text-4xl sm:text-5xl lg:text-[3.5rem] font-extrabold leading-[1.08] tracking-tight mt-1">
-                <span className="text-gradient">
+                <span className="bg-gradient-to-r from-[#7bb3e0] via-[#5b9bd5] to-[#4a90c2] bg-clip-text text-transparent">
                   notre priorité.
                 </span>
               </span>
             </h1>
 
-            <p className="mt-7 max-w-lg text-lg leading-relaxed text-slate-400 animate-fade-in-up delay-200">
+            {/* Story paragraph */}
+            <p className="mt-7 max-w-lg text-lg leading-relaxed text-[#a8bcd2] animate-fade-in-up delay-200">
               Fondée par <span className="font-semibold text-white">Can Oruc</span>, technicien
               diplômé et passionné, OC CLIM vous accompagne dans
               l'installation, l'entretien et le dépannage de vos systèmes
@@ -50,18 +72,18 @@ export default function Hero() {
               <span className="font-semibold text-white">pompes à chaleur</span>.
             </p>
 
-            {/* CTAs */}
+            {/* CTA Buttons */}
             <div className="mt-9 flex flex-wrap gap-4 animate-fade-in-up delay-300">
               <a
                 href="tel:0767117530"
-                className="group inline-flex items-center gap-2.5 rounded-2xl bg-gradient-to-r from-[#0369A1] to-[#0EA5E9] px-7 py-4 text-base font-semibold text-white shadow-xl shadow-[#0369A1]/30 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+                className="group inline-flex items-center gap-2.5 rounded-2xl bg-gradient-to-r from-[#1e3a5f] via-[#2b4a73] to-[#5b9bd5] px-7 py-4 text-base font-semibold text-white shadow-xl shadow-[#1e3a5f]/40 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
               >
                 <Phone className="h-5 w-5" />
                 07 67 11 75 30
               </a>
               <a
                 href="#contact"
-                className="group inline-flex items-center gap-2.5 rounded-2xl border-2 border-white/15 px-7 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-white/30 hover:bg-white/5 hover:-translate-y-1"
+                className="group inline-flex items-center gap-2.5 rounded-2xl border-2 border-[#5b9bd5]/25 px-7 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-[#5b9bd5]/50 hover:bg-white/5 hover:-translate-y-1"
               >
                 Demander un devis gratuit
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -76,48 +98,78 @@ export default function Hero() {
                     <Star key={i} className="h-4 w-4 text-amber-400 fill-amber-400" />
                   ))}
                 </div>
-                <span className="text-sm font-medium text-slate-400">5/5 sur AlloVoisins</span>
+                <span className="text-sm font-medium text-[#a8bcd2]">5/5 sur AlloVoisins</span>
               </div>
-              <div className="h-4 w-px bg-white/15" />
+              <div className="h-4 w-px bg-[#5b9bd5]/20" />
               <div className="flex items-center gap-2">
-                <Shield className="h-4 w-4 text-[#0EA5E9]" />
-                <span className="text-sm font-medium text-slate-400">Garantie décennale</span>
+                <Shield className="h-4 w-4 text-[#5b9bd5]" />
+                <span className="text-sm font-medium text-[#a8bcd2]">Garantie décennale</span>
               </div>
-              <div className="h-4 w-px bg-white/15" />
+              <div className="h-4 w-px bg-[#5b9bd5]/20" />
               <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-[#0EA5E9]" />
-                <span className="text-sm font-medium text-slate-400">Disponible 7j/7</span>
+                <Clock className="h-4 w-4 text-[#5b9bd5]" />
+                <span className="text-sm font-medium text-[#a8bcd2]">Disponible 7j/7</span>
               </div>
             </div>
           </div>
 
-          {/* Right: logo visual */}
+          {/* Right column: logo */}
           <div className="relative hidden lg:flex items-center justify-center">
-            <div className="relative">
-              {/* Glow behind logo */}
-              <div className="absolute inset-0 scale-150 bg-[#0369A1]/15 blur-[80px] rounded-full" />
-              {/* Logo */}
-              <div className="relative bg-white rounded-3xl p-12 shadow-2xl">
-                <Image
-                  src="/images/logo.png"
-                  alt="OC CLIM — Froid & Chaud"
-                  width={280}
-                  height={280}
-                  className="w-[280px] h-[280px] object-contain"
-                  priority
-                />
-              </div>
-              {/* Floating badges */}
-              <div className="absolute -top-4 -right-4 bg-[#0369A1] text-white rounded-xl px-4 py-2 shadow-lg animate-subtle-float">
-                <p className="text-xs font-bold">110+ clients</p>
-              </div>
-              <div className="absolute -bottom-4 -left-4 bg-white text-[#0F172A] rounded-xl px-4 py-2 shadow-lg animate-subtle-float" style={{ animationDelay: "2s" }}>
-                <div className="flex items-center gap-1">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-3 w-3 text-amber-400 fill-amber-400" />
-                  ))}
-                  <span className="text-xs font-bold ml-1">5/5</span>
+            <div className="relative w-full max-w-[500px]">
+              {/* Main card with logo */}
+              <div className="relative rounded-3xl bg-gradient-to-br from-white/10 to-white/5 border border-white/10 backdrop-blur-xl p-10 shadow-2xl">
+                {/* Animated ring */}
+                <div className="absolute -inset-4 rounded-[2rem] border border-[#5b9bd5]/10 animate-[spin_40s_linear_infinite]" />
+
+                {/* Logo */}
+                <div className="flex justify-center mb-8">
+                  <div className="relative bg-white rounded-3xl p-6 shadow-xl">
+                    <Image
+                      src="/images/logo.png"
+                      alt="OC CLIM — Froid & Chaud"
+                      width={160}
+                      height={160}
+                      className="w-40 h-40 object-contain"
+                      priority
+                    />
+                    <div className="absolute -inset-2 rounded-[1.5rem] bg-[#5b9bd5]/20 blur-xl -z-10" />
+                  </div>
                 </div>
+
+                {/* Stats inside card */}
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { value: "5/5", label: "Note clients", icon: Star },
+                    { value: "22 min", label: "Temps de réponse", icon: Clock },
+                    { value: "7j/7", label: "Disponibilité", icon: Phone },
+                    { value: "100%", label: "Satisfaction", icon: Shield },
+                  ].map((stat) => (
+                    <div key={stat.label} className="rounded-2xl bg-white/5 border border-white/10 p-4 text-center backdrop-blur-sm hover:bg-white/10 transition-colors duration-300">
+                      <stat.icon className="h-5 w-5 text-[#5b9bd5] mx-auto mb-2" />
+                      <p className="text-xl font-bold text-white">{stat.value}</p>
+                      <p className="text-[11px] text-[#a8bcd2] mt-0.5">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Brands */}
+                <div className="mt-6 pt-6 border-t border-white/10">
+                  <p className="text-[10px] uppercase tracking-widest text-[#5b9bd5]/50 text-center mb-3">
+                    Marques partenaires
+                  </p>
+                  <div className="flex justify-center gap-6">
+                    {["Daikin", "Mitsubishi", "Heiwa", "Ariston"].map((brand) => (
+                      <span key={brand} className="text-xs font-semibold text-[#a8bcd2]/50 hover:text-[#a8bcd2] transition-colors duration-300">
+                        {brand}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating accent */}
+              <div className="absolute -top-6 -right-6 h-20 w-20 rounded-2xl bg-gradient-to-br from-[#5b9bd5] to-[#4a90c2] flex items-center justify-center shadow-xl shadow-[#5b9bd5]/30 animate-float">
+                <span className="text-2xl font-black text-white">OC</span>
               </div>
             </div>
           </div>
