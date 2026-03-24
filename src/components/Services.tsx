@@ -1,109 +1,95 @@
-"use client";
-
-import { Wind, Flame, Settings, AlertTriangle, ArrowRight } from "lucide-react";
+import { Wind, Flame, Wrench, AlertTriangle, ArrowRight } from "lucide-react";
 
 const services = [
   {
     icon: Wind,
     title: "Climatisation",
     description:
-      "Installation de systèmes mono-split, bi-split et multi-split pour un confort optimal en toute saison. Nous étudions votre espace pour vous proposer la solution la plus adaptée.",
-    features: ["Mono & Multi-split", "Réversible chaud/froid", "Silencieux", "Classe énergétique A+++"],
-    gradient: "from-[#1e3a5f] to-[#2b4a73]",
+      "Installation de systèmes mono-split, bi-split et multi-split adaptés à votre espace. Confort garanti été comme hiver avec des équipements réversibles.",
+    features: ["Mono & Multi-split", "Réversible", "Silencieux", "A+++"],
   },
   {
     icon: Flame,
     title: "Pompes à chaleur",
     description:
-      "Pompes à chaleur Air/Eau et Air/Air haute performance. Réduisez votre facture énergétique jusqu’à 70 % tout en chauffant efficacement votre logement.",
-    features: ["Air/Eau & Air/Air", "Économies jusqu'à 70%", "Éligible aux aides", "Haut rendement"],
-    gradient: "from-[#2b4a73] to-[#5b9bd5]",
+      "Solutions Air/Eau et Air/Air haute performance. Réduisez votre facture énergétique jusqu'à 70 % tout en chauffant efficacement votre logement.",
+    features: ["Air/Eau & Air/Air", "Jusqu'à -70%", "Aides financières", "Haut rendement"],
   },
   {
-    icon: Settings,
+    icon: Wrench,
     title: "Entretien & Maintenance",
     description:
-      "Un entretien régulier garantit la longévité et les performances de vos équipements. Nous proposons des contrats annuels pour votre tranquillité.",
-    features: ["Contrat annuel", "Préventif & curatif", "Toutes marques", "Conformité réglementaire"],
-    gradient: "from-[#5b9bd5] to-[#4a90c2]",
+      "Un entretien régulier garantit la longévité et la performance de vos équipements. Contrats annuels disponibles pour votre tranquillité.",
+    features: ["Contrat annuel", "Toutes marques", "Préventif", "Conformité"],
   },
   {
     icon: AlertTriangle,
-    title: "Dépannage rapide",
+    title: "Dépannage",
     description:
-      "Panne, dysfonctionnement ou urgence ? Nous intervenons rapidement pour diagnostiquer et réparer votre installation. Disponible 7 jours sur 7.",
-    features: ["Intervention rapide", "Diagnostic précis", "7j/7", "Toutes marques"],
-    gradient: "from-[#4a90c2] to-[#1e3a5f]",
+      "Panne ou urgence ? Diagnostic rapide et réparation efficace de votre installation. Disponible 7 jours sur 7, y compris les jours fériés.",
+    features: ["7j/7", "Diagnostic précis", "Toutes marques", "Intervention rapide"],
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 sm:py-32 bg-[#f8fbff]">
+    <section id="services" className="py-24 sm:py-32 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
-        <div className="max-w-3xl mb-20">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide uppercase bg-[#5b9bd5]/10 text-[#5b9bd5] mb-5">
-            <Settings className="h-3.5 w-3.5" />
-            Nos métiers
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1e3a5f] leading-tight">
-            Des solutions complètes,
-            <br />
-            <span className="text-gradient">un seul interlocuteur.</span>
+        {/* Header */}
+        <div className="max-w-2xl mb-16">
+          <p className="text-sm font-semibold uppercase tracking-wider text-[#0369A1] mb-3">
+            Nos services
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] leading-tight">
+            Des solutions complètes pour votre confort
           </h2>
-          <p className="mt-5 text-lg text-[#5a7394] leading-relaxed max-w-2xl">
-            De l'installation au dépannage, OC CLIM vous accompagne
-            avec un service fiable et personnalisé. Chaque projet est unique,
-            chaque solution est sur-mesure.
+          <p className="mt-4 text-lg text-[#64748B] leading-relaxed">
+            De l'installation au dépannage, OC CLIM vous accompagne avec un service
+            fiable, personnalisé et transparent.
           </p>
         </div>
 
-        {/* Services grid */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-          {services.map((service, index) => {
+        {/* Grid */}
+        <div className="grid md:grid-cols-2 gap-6">
+          {services.map((service, i) => {
             const Icon = service.icon;
             return (
               <div
                 key={service.title}
-                className="group relative bg-white rounded-3xl p-8 lg:p-10 shadow-[0_4px_30px_rgba(30,58,95,0.06)] border border-[#e5eef7] hover:shadow-[0_8px_40px_rgba(30,58,95,0.12)] hover:-translate-y-1 transition-all duration-500"
+                className="group bg-white rounded-2xl p-8 border border-[#E2E8F0] hover:border-[#0369A1]/20 hover:shadow-lg transition-all duration-300"
               >
-                {/* Corner number */}
-                <span className="absolute top-6 right-8 text-7xl font-black text-[#e5eef7] select-none leading-none transition-colors duration-500 group-hover:text-[#5b9bd5]/10">
-                  0{index + 1}
-                </span>
-
-                {/* Icon */}
-                <div className={`relative inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${service.gradient} shadow-lg shadow-[#1e3a5f]/15 group-hover:scale-110 transition-transform duration-500`}>
-                  <Icon className="h-6 w-6 text-white" strokeWidth={1.8} />
+                {/* Icon + number */}
+                <div className="flex items-start justify-between mb-6">
+                  <div className="h-12 w-12 rounded-xl bg-[#0369A1]/10 flex items-center justify-center group-hover:bg-[#0369A1] transition-colors duration-300">
+                    <Icon className="h-5 w-5 text-[#0369A1] group-hover:text-white transition-colors duration-300" strokeWidth={2} />
+                  </div>
+                  <span className="text-5xl font-extrabold text-[#E2E8F0] group-hover:text-[#0369A1]/10 transition-colors">
+                    0{i + 1}
+                  </span>
                 </div>
 
-                {/* Title */}
-                <h3 className="mt-6 text-xl font-bold text-[#1e3a5f]">
+                <h3 className="text-xl font-bold text-[#0F172A] mb-3">
                   {service.title}
                 </h3>
-
-                {/* Description */}
-                <p className="mt-3 text-[#5a7394] leading-relaxed">
+                <p className="text-[#64748B] leading-relaxed mb-5">
                   {service.description}
                 </p>
 
-                {/* Features */}
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {service.features.map((feature) => (
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {service.features.map((f) => (
                     <span
-                      key={feature}
-                      className="inline-flex items-center text-xs font-medium bg-[#f0f6ff] text-[#1e3a5f] px-3 py-1.5 rounded-full border border-[#e5eef7]"
+                      key={f}
+                      className="text-xs font-medium bg-[#F1F5F9] text-[#334155] px-2.5 py-1 rounded-md"
                     >
-                      {feature}
+                      {f}
                     </span>
                   ))}
                 </div>
 
-                {/* Link */}
-                <a href="#contact" className="inline-flex items-center gap-1.5 mt-6 text-sm font-semibold text-[#5b9bd5] group-hover:text-[#1e3a5f] transition-colors duration-300">
+                <a href="#contact" className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0369A1] hover:gap-2.5 transition-all">
                   Demander un devis
-                  <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRight className="h-3.5 w-3.5" />
                 </a>
               </div>
             );
