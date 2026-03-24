@@ -2,15 +2,15 @@ import { Wind, MapPin, Clock, Mail, Phone, ArrowUp } from "lucide-react";
 
 const serviceLinks = [
   { label: "Climatisation", href: "#services" },
-  { label: "Pompe \u00e0 chaleur", href: "#services" },
+  { label: "Pompe à chaleur", href: "#services" },
   { label: "Entretien & maintenance", href: "#services" },
-  { label: "D\u00e9pannage", href: "#services" },
+  { label: "Dépannage", href: "#services" },
 ];
 
 const navLinks = [
   { label: "Accueil", href: "#" },
   { label: "Services", href: "#services" },
-  { label: "\u00c0 propos", href: "#a-propos" },
+  { label: "À propos", href: "#a-propos" },
   { label: "Avis clients", href: "#avis" },
   { label: "Contact", href: "#contact" },
 ];
@@ -43,8 +43,8 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm leading-relaxed">
-              Sp&eacute;cialiste en climatisation et pompes &agrave; chaleur sur Bordeaux
-              M&eacute;tropole. Votre artisan de confiance depuis 2024.
+              Spécialiste en climatisation et pompes à chaleur sur Bordeaux
+              Métropole. Votre artisan de confiance depuis 2024.
             </p>
           </div>
 
@@ -98,7 +98,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Clock className="w-4 h-4 shrink-0 text-[#5b9bd5]" />
-                <span>7j/7 &mdash; Week-ends et jours f&eacute;ri&eacute;s</span>
+                <span>7j/7 &mdash; Week-ends et jours fériés</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 shrink-0 text-[#5b9bd5]" />
@@ -109,7 +109,7 @@ export default function Footer() {
               <li className="pt-2 text-xs text-[#5b9bd5]/50">
                 SIRET&nbsp;: 987&nbsp;418&nbsp;076&nbsp;00012
                 <br />
-                Garantie d&eacute;cennale
+                Garantie décennale
               </li>
             </ul>
           </div>
@@ -120,7 +120,7 @@ export default function Footer() {
       <div className="border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-[#5b9bd5]/40">
-            &copy; {new Date().getFullYear()} OC CLIM &mdash; Can Oruc. Tous droits r&eacute;serv&eacute;s.
+            &copy; {new Date().getFullYear()} OC CLIM &mdash; Can Oruc. Tous droits réservés.
           </p>
           <a
             href="#"

@@ -4,28 +4,28 @@ const testimonials = [
   {
     name: "Kevin D.",
     location: "Bordeaux",
-    text: "Personne aimable, a su se rendre disponible rapidement pour r\u00e9soudre nos probl\u00e8mes.",
+    text: "Personne aimable, a su se rendre disponible rapidement pour résoudre nos problèmes.",
     initials: "KD",
     color: "from-[#1e3a5f] to-[#2b4a73]",
   },
   {
     name: "Benjamin M.",
     location: "Cestas",
-    text: "R\u00e9vision d\u2019une pompe \u00e0 chaleur, tr\u00e8s bon contact, tr\u00e8s professionnel. Je recommande.",
+    text: "Révision d’une pompe à chaleur, très bon contact, très professionnel. Je recommande.",
     initials: "BM",
     color: "from-[#2b4a73] to-[#5b9bd5]",
   },
   {
     name: "Sandrine S.",
-    location: "Bordeaux M\u00e9tropole",
-    text: "Professionnel courtois, efficace, expliquant clairement la probl\u00e9matique rencontr\u00e9e.",
+    location: "Bordeaux Métropole",
+    text: "Professionnel courtois, efficace, expliquant clairement la problématique rencontrée.",
     initials: "SS",
     color: "from-[#5b9bd5] to-[#4a90c2]",
   },
   {
     name: "M. Boucher",
     location: "Gironde",
-    text: "Une r\u00e9activit\u00e9 dans les \u00e9changes. Tr\u00e8s satisfait de la prestation, je recommande vivement OC CLIM.",
+    text: "Une réactivité dans les échanges. Très satisfait de la prestation, je recommande vivement OC CLIM.",
     initials: "MB",
     color: "from-[#4a90c2] to-[#1e3a5f]",
   },
@@ -43,10 +43,10 @@ export default function Testimonials() {
         <div className="text-center mb-16">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#5b9bd5]/10 text-[#7bb3e0] text-sm font-semibold tracking-wide uppercase mb-5">
             <Star className="h-3.5 w-3.5" />
-            T\u00e9moignages
+            Témoignages
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
-            La parole &agrave; nos clients
+            La parole à nos clients
           </h2>
           <div className="flex items-center justify-center gap-3 mt-6">
             <div className="flex gap-0.5">
@@ -55,7 +55,7 @@ export default function Testimonials() {
               ))}
             </div>
             <span className="text-[#a8bcd2] text-sm font-medium">
-              5/5 sur AlloVoisins &middot; Avis v\u00e9rifi\u00e9s
+              5/5 sur AlloVoisins &middot; Avis vérifiés
             </span>
           </div>
         </div>

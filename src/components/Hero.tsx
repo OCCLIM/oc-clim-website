@@ -46,7 +46,7 @@ export default function Hero() {
             <div className="animate-fade-in-up">
               <div className="inline-flex items-center gap-2.5 rounded-full border border-[#5b9bd5]/20 bg-[#5b9bd5]/10 px-4 py-2 text-sm font-medium text-[#7bb3e0] backdrop-blur-sm">
                 <Wind className="h-4 w-4" />
-                Artisan certifi&eacute; &middot; Cestas & Bordeaux M&eacute;tropole
+                Artisan certifié &middot; Cestas & Bordeaux Métropole
               </div>
             </div>
 
@@ -64,11 +64,11 @@ export default function Hero() {
 
             {/* Story paragraph */}
             <p className="mt-7 max-w-lg text-lg leading-relaxed text-[#a8bcd2] animate-fade-in-up delay-200">
-              Fond&eacute;e par <span className="font-semibold text-white">Can Oruc</span>, technicien
-              dipl&ocirc;m&eacute; et passionn&eacute;, OC&nbsp;CLIM vous accompagne dans
-              l&apos;installation, l&apos;entretien et le d&eacute;pannage de vos syst&egrave;mes
+              Fondée par <span className="font-semibold text-white">Can Oruc</span>, technicien
+              diplômé et passionné, OC&nbsp;CLIM vous accompagne dans
+              l&apos;installation, l&apos;entretien et le dépannage de vos systèmes
               de <span className="font-semibold text-white">climatisation</span> et{" "}
-              <span className="font-semibold text-white">pompes &agrave; chaleur</span>.
+              <span className="font-semibold text-white">pompes à chaleur</span>.
             </p>
 
             {/* CTA Buttons */}
@@ -85,7 +85,7 @@ export default function Hero() {
                 href="#services"
                 className="group inline-flex items-center gap-2.5 rounded-2xl border-2 border-[#5b9bd5]/25 px-7 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-[#5b9bd5]/50 hover:bg-white/5 hover:-translate-y-1"
               >
-                D&eacute;couvrir nos services
+                Découvrir nos services
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
             </div>
@@ -103,12 +103,12 @@ export default function Hero() {
               <div className="h-4 w-px bg-[#5b9bd5]/20" />
               <div className="flex items-center gap-2">
                 <Shield className="h-4 w-4 text-[#5b9bd5]" />
-                <span className="text-sm font-medium text-[#a8bcd2]">Garantie d&eacute;cennale</span>
+                <span className="text-sm font-medium text-[#a8bcd2]">Garantie décennale</span>
               </div>
               <div className="h-4 w-px bg-[#5b9bd5]/20" />
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4 text-[#5b9bd5]" />
-                <span className="text-sm font-medium text-[#a8bcd2]">R&eacute;ponse en 22 min</span>
+                <span className="text-sm font-medium text-[#a8bcd2]">Réponse en 22 min</span>
               </div>
             </div>
           </div>
@@ -135,8 +135,8 @@ export default function Hero() {
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     { value: "5/5", label: "Note clients", icon: Star },
-                    { value: "22 min", label: "Temps de r\u00e9ponse", icon: Clock },
-                    { value: "7j/7", label: "Disponibilit\u00e9", icon: Phone },
+                    { value: "22 min", label: "Temps de réponse", icon: Clock },
+                    { value: "7j/7", label: "Disponibilité", icon: Phone },
                     { value: "100%", label: "Satisfaction", icon: Shield },
                   ].map((stat) => (
                     <div key={stat.label} className="rounded-2xl bg-white/5 border border-white/10 p-4 text-center backdrop-blur-sm hover:bg-white/10 transition-colors duration-300">

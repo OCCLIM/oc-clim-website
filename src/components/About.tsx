@@ -3,17 +3,17 @@
 import { Award, Users, Star, Clock, Shield, CheckCircle, GraduationCap, MapPin } from "lucide-react";
 
 const milestones = [
-  { year: "Formation", text: "Bac Pro Technicien du Froid et du Conditionnement de l\u2019Air" },
-  { year: "Exp\u00e9rience", text: "Interventions sur tous types d\u2019installations climatiques" },
-  { year: "Avril 2024", text: "Cr\u00e9ation d\u2019OC CLIM \u2014 l\u2019aventure commence" },
-  { year: "Aujourd\u2019hui", text: "Plus de 110 clients satisfaits sur Bordeaux M\u00e9tropole" },
+  { year: "Formation", text: "Bac Pro Technicien du Froid et du Conditionnement de l’Air" },
+  { year: "Expérience", text: "Interventions sur tous types d’installations climatiques" },
+  { year: "Avril 2024", text: "Création d’OC CLIM — l’aventure commence" },
+  { year: "Aujourd’hui", text: "Plus de 110 clients satisfaits sur Bordeaux Métropole" },
 ];
 
 const stats = [
   { value: "110+", label: "Clients satisfaits", icon: Users },
   { value: "5/5", label: "Note AlloVoisins", icon: Star },
-  { value: "22 min", label: "Temps de r\u00e9ponse", icon: Clock },
-  { value: "7j/7", label: "Disponibilit\u00e9", icon: Award },
+  { value: "22 min", label: "Temps de réponse", icon: Clock },
+  { value: "7j/7", label: "Disponibilité", icon: Award },
 ];
 
 export default function About() {
@@ -30,7 +30,7 @@ export default function About() {
             Notre histoire
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1e3a5f] leading-tight">
-            Un artisan passionn&eacute;,
+            Un artisan passionné,
             <br />
             <span className="text-gradient">proche de vous.</span>
           </h2>
@@ -41,22 +41,22 @@ export default function About() {
           <div className="lg:col-span-3">
             <div className="prose prose-lg max-w-none text-[#5a7394] leading-relaxed space-y-5">
               <p className="text-xl">
-                Derri&egrave;re <strong className="text-[#1e3a5f]">OC&nbsp;CLIM</strong>, il y a une
-                conviction simple&nbsp;: chacun m&eacute;rite un air sain et un confort
+                Derrière <strong className="text-[#1e3a5f]">OC&nbsp;CLIM</strong>, il y a une
+                conviction simple&nbsp;: chacun mérite un air sain et un confort
                 thermique optimal chez soi.
               </p>
               <p>
-                <strong className="text-[#1e3a5f]">Can Oruc</strong>, fondateur et g&eacute;rant,
-                est un technicien dipl&ocirc;m&eacute; d&apos;un Bac&nbsp;Pro TFCA
-                (Technicien du Froid et du Conditionnement de l&apos;Air). Bas&eacute;
-                &agrave; <strong className="text-[#1e3a5f]">Cestas&nbsp;(33610)</strong>, il intervient
-                sur toute la m&eacute;tropole bordelaise avec r&eacute;activit&eacute; et professionnalisme.
+                <strong className="text-[#1e3a5f]">Can Oruc</strong>, fondateur et gérant,
+                est un technicien diplômé d&apos;un Bac&nbsp;Pro TFCA
+                (Technicien du Froid et du Conditionnement de l&apos;Air). Basé
+                à <strong className="text-[#1e3a5f]">Cestas&nbsp;(33610)</strong>, il intervient
+                sur toute la métropole bordelaise avec réactivité et professionnalisme.
               </p>
               <p>
-                Ce qui fait la diff&eacute;rence&nbsp;? Un interlocuteur unique, des
-                conseils honn&ecirc;tes, et un travail soign&eacute;. Pas de
-                sous-traitance, pas d&apos;interm&eacute;diaire &mdash; c&apos;est Can
-                qui &eacute;tudie votre projet, r&eacute;alise les travaux et assure le
+                Ce qui fait la différence&nbsp;? Un interlocuteur unique, des
+                conseils honn&ecirc;tes, et un travail soigné. Pas de
+                sous-traitance, pas d&apos;intermédiaire &mdash; c&apos;est Can
+                qui étudie votre projet, réalise les travaux et assure le
                 suivi.
               </p>
             </div>
@@ -86,7 +86,7 @@ export default function About() {
                 <span className="text-3xl font-black tracking-tight">CO</span>
               </div>
               <h3 className="text-center text-xl font-bold">Can Oruc</h3>
-              <p className="mt-1 text-center text-sm text-white/70">Fondateur & G&eacute;rant</p>
+              <p className="mt-1 text-center text-sm text-white/70">Fondateur & Gérant</p>
 
               <div className="my-5 h-px bg-white/15" />
 
@@ -101,7 +101,7 @@ export default function About() {
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <Shield className="h-4 w-4 text-[#7bb3e0] shrink-0" />
-                  <span className="text-white/85">Garantie d&eacute;cennale</span>
+                  <span className="text-white/85">Garantie décennale</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <CheckCircle className="h-4 w-4 text-[#7bb3e0] shrink-0" />
@@ -130,7 +130,7 @@ export default function About() {
             {/* Brands worked with */}
             <div className="rounded-2xl bg-[#f0f6ff] border border-[#e5eef7] p-6">
               <p className="text-xs font-semibold uppercase tracking-wider text-[#5b9bd5]/60 mb-3">
-                Marques install&eacute;es & entretenues
+                Marques installées & entretenues
               </p>
               <div className="flex flex-wrap gap-2">
                 {["Daikin", "Mitsubishi", "Heiwa", "Ariston", "Atlantic"].map((brand) => (

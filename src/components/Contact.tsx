@@ -12,24 +12,24 @@ const infoCards = [
   },
   {
     icon: Clock,
-    title: "Disponibilit\u00e9",
-    lines: ["7 jours sur 7", "Week-ends et jours f\u00e9ri\u00e9s"],
+    title: "Disponibilité",
+    lines: ["7 jours sur 7", "Week-ends et jours fériés"],
     color: "from-[#2b4a73] to-[#5b9bd5]",
   },
   {
     icon: Phone,
-    title: "R\u00e9activit\u00e9",
-    lines: ["R\u00e9ponse en 22 min en moyenne", "Devis gratuit & sans engagement"],
+    title: "Réactivité",
+    lines: ["Réponse en 22 min en moyenne", "Devis gratuit & sans engagement"],
     color: "from-[#5b9bd5] to-[#4a90c2]",
   },
 ];
 
 const serviceOptions = [
   "Installation climatisation",
-  "Pompe \u00e0 chaleur Air/Air",
-  "Pompe \u00e0 chaleur Air/Eau",
+  "Pompe à chaleur Air/Air",
+  "Pompe à chaleur Air/Eau",
   "Entretien & maintenance",
-  "D\u00e9pannage urgent",
+  "Dépannage urgent",
   "Autre demande",
 ];
 
@@ -77,7 +77,7 @@ export default function Contact() {
             Parlons de votre projet
           </h2>
           <p className="mt-5 text-lg text-[#5a7394] leading-relaxed">
-            D\u00e9crivez votre besoin et recevez une r\u00e9ponse rapide.
+            Décrivez votre besoin et recevez une réponse rapide.
             Devis gratuit et sans engagement.
           </p>
         </div>
@@ -113,7 +113,7 @@ export default function Contact() {
                 <p className="text-sm text-[#5a7394] mt-1">
                   Cestas, Bordeaux, Pessac, Talence,
                   <br />
-                  M\u00e9rignac, Gradignan et alentours
+                  Mérignac, Gradignan et alentours
                 </p>
               </div>
             </div>
@@ -127,10 +127,10 @@ export default function Contact() {
                   <CheckCircle className="w-10 h-10 text-emerald-500" />
                 </div>
                 <h3 className="text-2xl font-bold text-[#1e3a5f] text-center">
-                  Demande envoy\u00e9e !
+                  Demande envoyée !
                 </h3>
                 <p className="text-[#5a7394] mt-3 text-center max-w-md">
-                  Merci pour votre confiance. Can vous recontactera dans les plus brefs d\u00e9lais.
+                  Merci pour votre confiance. Can vous recontactera dans les plus brefs délais.
                 </p>
               </div>
             ) : (
@@ -153,7 +153,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <label htmlFor="telephone" className="block text-sm font-semibold text-[#1e3a5f] mb-2">
-                      T\u00e9l\u00e9phone
+                      Téléphone
                     </label>
                     <input
                       id="telephone"
@@ -214,7 +214,7 @@ export default function Contact() {
                     required
                     value={form.message}
                     onChange={handleChange}
-                    placeholder="D\u00e9crivez votre projet ou votre besoin..."
+                    placeholder="Décrivez votre projet ou votre besoin..."
                     className="w-full rounded-xl border border-[#e5eef7] bg-[#f8fbff] px-4 py-3 text-sm text-[#1e3a5f] placeholder:text-[#a8bcd2] focus:outline-none focus:ring-2 focus:ring-[#5b9bd5]/30 focus:border-[#5b9bd5] transition resize-none"
                   />
                 </div>
@@ -228,7 +228,7 @@ export default function Contact() {
                 </button>
 
                 <p className="text-center text-xs text-[#a8bcd2]">
-                  Devis 100% gratuit &middot; R\u00e9ponse sous 24h &middot; Sans engagement
+                  Devis 100% gratuit &middot; Réponse sous 24h &middot; Sans engagement
                 </p>
               </form>
             )}

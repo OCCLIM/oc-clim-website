@@ -7,32 +7,32 @@ const services = [
     icon: Wind,
     title: "Climatisation",
     description:
-      "Installation de syst\u00e8mes mono-split, bi-split et multi-split pour un confort optimal en toute saison. Nous \u00e9tudions votre espace pour vous proposer la solution la plus adapt\u00e9e.",
-    features: ["Mono & Multi-split", "R\u00e9versible chaud/froid", "Silencieux", "Classe \u00e9nerg\u00e9tique A+++"],
+      "Installation de systèmes mono-split, bi-split et multi-split pour un confort optimal en toute saison. Nous étudions votre espace pour vous proposer la solution la plus adaptée.",
+    features: ["Mono & Multi-split", "Réversible chaud/froid", "Silencieux", "Classe énergétique A+++"],
     gradient: "from-[#1e3a5f] to-[#2b4a73]",
   },
   {
     icon: Flame,
-    title: "Pompes \u00e0 chaleur",
+    title: "Pompes à chaleur",
     description:
-      "Pompes \u00e0 chaleur Air/Eau et Air/Air haute performance. R\u00e9duisez votre facture \u00e9nerg\u00e9tique jusqu\u2019\u00e0 70\u00a0% tout en chauffant efficacement votre logement.",
-    features: ["Air/Eau & Air/Air", "\u00c9conomies jusqu'\u00e0 70%", "\u00c9ligible aux aides", "Haut rendement"],
+      "Pompes à chaleur Air/Eau et Air/Air haute performance. Réduisez votre facture énergétique jusqu’à 70 % tout en chauffant efficacement votre logement.",
+    features: ["Air/Eau & Air/Air", "Économies jusqu'à 70%", "Éligible aux aides", "Haut rendement"],
     gradient: "from-[#2b4a73] to-[#5b9bd5]",
   },
   {
     icon: Settings,
     title: "Entretien & Maintenance",
     description:
-      "Un entretien r\u00e9gulier garantit la long\u00e9vit\u00e9 et les performances de vos \u00e9quipements. Nous proposons des contrats annuels pour votre tranquillit\u00e9.",
-    features: ["Contrat annuel", "Pr\u00e9ventif & curatif", "Toutes marques", "Conformit\u00e9 r\u00e9glementaire"],
+      "Un entretien régulier garantit la longévité et les performances de vos équipements. Nous proposons des contrats annuels pour votre tranquillité.",
+    features: ["Contrat annuel", "Préventif & curatif", "Toutes marques", "Conformité réglementaire"],
     gradient: "from-[#5b9bd5] to-[#4a90c2]",
   },
   {
     icon: AlertTriangle,
-    title: "D\u00e9pannage rapide",
+    title: "Dépannage rapide",
     description:
-      "Panne, dysfonctionnement ou urgence\u00a0? Nous intervenons rapidement pour diagnostiquer et r\u00e9parer votre installation. Disponible 7 jours sur 7.",
-    features: ["Intervention rapide", "Diagnostic pr\u00e9cis", "7j/7", "Toutes marques"],
+      "Panne, dysfonctionnement ou urgence ? Nous intervenons rapidement pour diagnostiquer et réparer votre installation. Disponible 7 jours sur 7.",
+    features: ["Intervention rapide", "Diagnostic précis", "7j/7", "Toutes marques"],
     gradient: "from-[#4a90c2] to-[#1e3a5f]",
   },
 ];
@@ -45,16 +45,16 @@ export default function Services() {
         <div className="max-w-3xl mb-20">
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide uppercase bg-[#5b9bd5]/10 text-[#5b9bd5] mb-5">
             <Settings className="h-3.5 w-3.5" />
-            Nos m&eacute;tiers
+            Nos métiers
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1e3a5f] leading-tight">
-            Des solutions compl&egrave;tes,
+            Des solutions complètes,
             <br />
             <span className="text-gradient">un seul interlocuteur.</span>
           </h2>
           <p className="mt-5 text-lg text-[#5a7394] leading-relaxed max-w-2xl">
-            De l&apos;installation au d&eacute;pannage, OC&nbsp;CLIM vous accompagne
-            avec un service fiable et personnalis&eacute;. Chaque projet est unique,
+            De l&apos;installation au dépannage, OC&nbsp;CLIM vous accompagne
+            avec un service fiable et personnalisé. Chaque projet est unique,
             chaque solution est sur-mesure.
           </p>
         </div>
