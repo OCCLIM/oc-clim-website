@@ -1,97 +1,96 @@
+import { Snowflake, MapPin, Clock, Mail } from "lucide-react";
+
+const serviceLinks = [
+  { label: "Climatisation", href: "#services" },
+  { label: "Pompe à chaleur", href: "#services" },
+  { label: "Entretien & maintenance", href: "#services" },
+  { label: "Dépannage", href: "#services" },
+];
+
 export default function Footer() {
   return (
-    <footer className="bg-dark text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-[#0f172a] text-gray-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
-          <div className="sm:col-span-2 lg:col-span-1">
+          <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-              </div>
-              <span className="text-xl font-bold">
-                OC <span className="text-primary">CLIM</span>
-              </span>
+              <Snowflake className="w-7 h-7 text-[#00b4d8]" />
+              <span className="text-xl font-bold text-white">OC CLIM</span>
             </div>
-            <p className="text-sm text-white/60 leading-relaxed">
-              Expert en climatisation et pompes \u00e0 chaleur \u00e0 Bordeaux et Cestas.
-              Installation, entretien et d\u00e9pannage.
+            <p className="text-sm leading-relaxed">
+              Spécialiste en climatisation et pompes à chaleur sur Bordeaux
+              Métropole. Installation, entretien et dépannage par un
+              professionnel certifié.
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-sm text-white/60">
-              <li>
-                <a href="#services" className="hover:text-white transition-colors">
-                  Installation climatisation
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-white transition-colors">
-                  Pompes \u00e0 chaleur
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-white transition-colors">
-                  Entretien & Maintenance
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-white transition-colors">
-                  D\u00e9pannage
-                </a>
-              </li>
+            <h3 className="text-white font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+              {serviceLinks.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    className="text-sm hover:text-[#00b4d8] transition-colors duration-200"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Infos */}
+          {/* Informations */}
           <div>
-            <h4 className="font-semibold mb-4">Informations</h4>
-            <ul className="space-y-2 text-sm text-white/60">
-              <li>OC CLIM \u2014 Can Oruc</li>
-              <li>SIRET : 98741807600012</li>
-              <li>Cestas (33610)</li>
-              <li>Garantie d\u00e9cennale</li>
+            <h3 className="text-white font-semibold mb-4">Informations</h3>
+            <ul className="space-y-2 text-sm">
+              <li>OC CLIM &mdash; Can Oruc</li>
+              <li>SIRET : 987 418 076 00012</li>
+              <li className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-[#00b4d8]" />
+                <span>
+                  2B Chemin du Chibaley
+                  <br />
+                  33610 Cestas
+                </span>
+              </li>
+              <li>Garantie décennale</li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
-            <ul className="space-y-2 text-sm text-white/60">
-              <li>
+            <h3 className="text-white font-semibold mb-4">Contact</h3>
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-start gap-2">
+                <Mail className="w-4 h-4 mt-0.5 shrink-0 text-[#00b4d8]" />
                 <a
-                  href="tel:+33600000000"
-                  className="hover:text-white transition-colors"
+                  href="#contact"
+                  className="hover:text-[#00b4d8] transition-colors duration-200"
                 >
-                  06 XX XX XX XX
+                  Contactez-nous via le formulaire
                 </a>
               </li>
-              <li>Bordeaux M\u00e9tropole</li>
-              <li>7j/7 disponible</li>
+              <li className="flex items-start gap-2">
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-[#00b4d8]" />
+                <span>Bordeaux Métropole</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Clock className="w-4 h-4 mt-0.5 shrink-0 text-[#00b4d8]" />
+                <span>7j/7 &mdash; Week-ends et jours fériés</span>
+              </li>
             </ul>
           </div>
         </div>
+      </div>
 
-        <div className="mt-10 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/40">
-          <p>&copy; {new Date().getFullYear()} OC CLIM. Tous droits r\u00e9serv\u00e9s.</p>
-          <p>
-            Fait avec soin pour votre confort
-          </p>
+      {/* Bottom bar */}
+      <div className="border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-gray-500">
+          <p>&copy; {new Date().getFullYear()} OC CLIM. Tous droits réservés.</p>
+          <p>Site réalisé avec soin</p>
         </div>
       </div>
     </footer>

@@ -1,210 +1,234 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+
+const infoCards = [
+  {
+    icon: Phone,
+    title: "Téléphone",
+    description: "Contactez-nous via le formulaire",
+  },
+  {
+    icon: MapPin,
+    title: "Zone d'intervention",
+    description: "Cestas (33610) & tout Bordeaux Métropole",
+  },
+  {
+    icon: Clock,
+    title: "Disponibilité",
+    description: "7j/7 — Week-ends et jours fériés",
+  },
+];
+
+const services = [
+  "Installation climatisation",
+  "Pompe à chaleur Air/Air",
+  "Pompe à chaleur Air/Eau",
+  "Entretien & maintenance",
+  "Dépannage urgent",
+];
+
 export default function Contact() {
+  const [form, setForm] = useState({
+    nom: "",
+    telephone: "",
+    email: "",
+    service: "",
+    message: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (submitted) {
+      const timer = setTimeout(() => {
+        setSubmitted(false);
+        setForm({ nom: "", telephone: "", email: "", service: "", message: "" });
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [submitted]);
+
+  function handleChange(
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  }
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setSubmitted(true);
+  }
+
   return (
-    <section id="contact" className="py-20 sm:py-28 bg-light">
+    <section id="contact" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-            Contact
-          </span>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-dark">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#0f172a]">
             Demandez votre devis gratuit
           </h2>
-          <p className="mt-4 text-gray-600 text-lg">
-            Contactez-nous pour toute demande de devis ou d&apos;information.
-            Nous vous r\u00e9pondons en moins de 30 minutes.
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            Décrivez votre projet et recevez une réponse rapide. Devis gratuit
+            et sans engagement.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-5 gap-8">
-          {/* Contact info */}
-          <div className="lg:col-span-2 space-y-6">
-            <div className="bg-white rounded-2xl p-6 shadow-sm">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-6 h-6 text-primary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
+        <div className="grid lg:grid-cols-5 gap-10">
+          {/* Left column — info cards */}
+          <div className="lg:col-span-2 flex flex-col gap-4">
+            {infoCards.map((card) => {
+              const Icon = card.icon;
+              return (
+                <div
+                  key={card.title}
+                  className="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-sm border border-gray-100"
+                >
+                  <div className="w-12 h-12 rounded-full bg-[#0057b8]/10 flex items-center justify-center shrink-0">
+                    <Icon className="w-6 h-6 text-[#0057b8]" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-[#0f172a]">
+                      {card.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 mt-1">
+                      {card.description}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold text-dark">T\u00e9l\u00e9phone</h3>
-                  <p className="text-gray-600 mt-1">Appelez-nous directement</p>
-                  <a
-                    href="tel:+33600000000"
-                    className="text-primary font-semibold mt-2 inline-block hover:underline"
-                  >
-                    06 XX XX XX XX
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 shadow-sm">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-6 h-6 text-primary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-bold text-dark">Zone d&apos;intervention</h3>
-                  <p className="text-gray-600 mt-1">
-                    Cestas (33610) & tout Bordeaux M\u00e9tropole
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 shadow-sm">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-6 h-6 text-primary"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-bold text-dark">Disponibilit\u00e9</h3>
-                  <p className="text-gray-600 mt-1">
-                    7j/7 \u2014 Week-ends et jours f\u00e9ri\u00e9s
-                  </p>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
 
-          {/* Form */}
-          <div className="lg:col-span-3">
-            <form className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm space-y-5">
-              <div className="grid sm:grid-cols-2 gap-5">
+          {/* Right column — form */}
+          <div className="lg:col-span-3 bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+            {submitted ? (
+              <div className="flex flex-col items-center justify-center h-full py-12 animate-fade-in">
+                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
+                  <CheckCircle className="w-9 h-9 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-[#0f172a] text-center">
+                  Votre demande a bien été envoyée !
+                </h3>
+                <p className="text-gray-600 mt-2 text-center max-w-md">
+                  Nous vous recontacterons dans les plus brefs délais.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label
+                      htmlFor="nom"
+                      className="block text-sm font-medium text-[#0f172a] mb-1.5"
+                    >
+                      Nom
+                    </label>
+                    <input
+                      id="nom"
+                      name="nom"
+                      type="text"
+                      required
+                      value={form.nom}
+                      onChange={handleChange}
+                      placeholder="Votre nom"
+                      className="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0057b8]/40 focus:border-[#0057b8] transition"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="telephone"
+                      className="block text-sm font-medium text-[#0f172a] mb-1.5"
+                    >
+                      Téléphone
+                    </label>
+                    <input
+                      id="telephone"
+                      name="telephone"
+                      type="tel"
+                      required
+                      value={form.telephone}
+                      onChange={handleChange}
+                      placeholder="06 00 00 00 00"
+                      className="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0057b8]/40 focus:border-[#0057b8] transition"
+                    />
+                  </div>
+                </div>
+
                 <div>
                   <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-1.5"
+                    htmlFor="email"
+                    className="block text-sm font-medium text-[#0f172a] mb-1.5"
                   >
-                    Nom complet
+                    Email
                   </label>
                   <input
-                    type="text"
-                    id="name"
-                    name="name"
+                    id="email"
+                    name="email"
+                    type="email"
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm"
-                    placeholder="Votre nom"
+                    value={form.email}
+                    onChange={handleChange}
+                    placeholder="votre@email.com"
+                    className="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0057b8]/40 focus:border-[#0057b8] transition"
                   />
                 </div>
+
                 <div>
                   <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium text-gray-700 mb-1.5"
+                    htmlFor="service"
+                    className="block text-sm font-medium text-[#0f172a] mb-1.5"
                   >
-                    T\u00e9l\u00e9phone
+                    Service
                   </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
+                  <select
+                    id="service"
+                    name="service"
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm"
-                    placeholder="06 XX XX XX XX"
+                    value={form.service}
+                    onChange={handleChange}
+                    className="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0057b8]/40 focus:border-[#0057b8] transition bg-white"
+                  >
+                    <option value="" disabled>
+                      Choisir un service
+                    </option>
+                    {services.map((s) => (
+                      <option key={s} value={s}>
+                        {s}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-[#0f172a] mb-1.5"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    required
+                    value={form.message}
+                    onChange={handleChange}
+                    placeholder="Décrivez votre projet ou votre besoin..."
+                    className="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0057b8]/40 focus:border-[#0057b8] transition resize-none"
                   />
                 </div>
-              </div>
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-1.5"
+
+                <button
+                  type="submit"
+                  className="w-full flex items-center justify-center gap-2 bg-[#0057b8] hover:bg-[#004494] text-white font-semibold py-3 rounded-lg transition-colors duration-200"
                 >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm"
-                  placeholder="votre@email.com"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="service"
-                  className="block text-sm font-medium text-gray-700 mb-1.5"
-                >
-                  Service souhait\u00e9
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm bg-white"
-                >
-                  <option value="">S\u00e9lectionnez un service</option>
-                  <option>Installation climatisation</option>
-                  <option>Pompe \u00e0 chaleur Air/Eau</option>
-                  <option>Pompe \u00e0 chaleur Air/Air</option>
-                  <option>Entretien / Maintenance</option>
-                  <option>D\u00e9pannage urgent</option>
-                  <option>Autre</option>
-                </select>
-              </div>
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-1.5"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-sm resize-none"
-                  placeholder="D\u00e9crivez votre besoin..."
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-primary text-white py-3.5 rounded-xl font-semibold text-sm hover:bg-primary-dark transition-colors"
-              >
-                Envoyer la demande de devis
-              </button>
-              <p className="text-xs text-gray-400 text-center">
-                Devis gratuit et sans engagement. R\u00e9ponse sous 30 minutes.
-              </p>
-            </form>
+                  <Send className="w-5 h-5" />
+                  Envoyer la demande de devis
+                </button>
+              </form>
+            )}
           </div>
         </div>
       </div>
