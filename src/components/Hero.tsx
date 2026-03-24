@@ -72,10 +72,13 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Right — Logo tel quel, fond blanc */}
+            {/* Right — Logo vivant */}
             <div className="hidden lg:block shrink-0 animate-fade-in delay-300">
               <div className="relative">
-                <div className="h-[340px] w-[340px] xl:h-[400px] xl:w-[400px] rounded-3xl bg-white flex items-center justify-center p-12 shadow-2xl shadow-white/[0.03]">
+                {/* Halo lumineux derrière */}
+                <div className="absolute inset-0 rounded-3xl bg-white/[0.03] blur-3xl animate-logo-breathe" />
+                {/* Cadre logo */}
+                <div className="relative h-[340px] w-[340px] xl:h-[400px] xl:w-[400px] rounded-3xl bg-white flex items-center justify-center p-14 animate-logo-float">
                   <Image
                     src="/images/logo.png"
                     alt="OC CLIM"

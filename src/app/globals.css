@@ -46,6 +46,16 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); }
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-12px); }
 }
+@keyframes logo-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(0.5deg); }
+}
+@keyframes logo-breathe {
+  0%, 100% { opacity: 0.03; transform: scale(1); }
+  50% { opacity: 0.07; transform: scale(1.08); }
+}
+.animate-logo-float { animation: logo-float 6s ease-in-out infinite; }
+.animate-logo-breathe { animation: logo-breathe 4s ease-in-out infinite; }
 @keyframes particle-float {
   0% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
   10% { opacity: 1; }
