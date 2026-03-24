@@ -1,100 +1,110 @@
 "use client";
 
-import { Snowflake, Flame, Settings, AlertTriangle } from "lucide-react";
+import { Wind, Flame, Settings, AlertTriangle, ArrowRight } from "lucide-react";
 
 const services = [
   {
-    num: "01",
-    icon: Snowflake,
-    title: "Installation climatisation",
+    icon: Wind,
+    title: "Climatisation",
     description:
-      "Installation professionnelle de systèmes de climatisation mono-split, bi-split, tri-split et multi-split. Solutions adaptées à chaque configuration pour un confort optimal été comme hiver.",
-    tags: ["Mono-split", "Bi-split", "Tri-split", "Multi-split", "Réversible"],
+      "Installation de syst\u00e8mes mono-split, bi-split et multi-split pour un confort optimal en toute saison. Nous \u00e9tudions votre espace pour vous proposer la solution la plus adapt\u00e9e.",
+    features: ["Mono & Multi-split", "R\u00e9versible chaud/froid", "Silencieux", "Classe \u00e9nerg\u00e9tique A+++"],
+    gradient: "from-[#1e3a5f] to-[#2b4a73]",
   },
   {
-    num: "02",
     icon: Flame,
-    title: "Pompes à chaleur",
+    title: "Pompes \u00e0 chaleur",
     description:
-      "Mise en place de pompes à chaleur Air/Eau et Air/Air haute performance. Réduisez votre facture énergétique jusqu\u2019à 70\u00a0% tout en chauffant efficacement votre logement.",
-    tags: ["Air/Eau", "Air/Air", "Économies d'énergie", "Éligible aides"],
+      "Pompes \u00e0 chaleur Air/Eau et Air/Air haute performance. R\u00e9duisez votre facture \u00e9nerg\u00e9tique jusqu\u2019\u00e0 70\u00a0% tout en chauffant efficacement votre logement.",
+    features: ["Air/Eau & Air/Air", "\u00c9conomies jusqu'\u00e0 70%", "\u00c9ligible aux aides", "Haut rendement"],
+    gradient: "from-[#2b4a73] to-[#5b9bd5]",
   },
   {
-    num: "03",
     icon: Settings,
     title: "Entretien & Maintenance",
     description:
-      "Maintenance préventive et curative de vos installations. Contrats d\u2019entretien annuels pour garantir la longévité et les performances de vos équipements.",
-    tags: ["Contrat annuel", "Préventif", "Curatif", "Toutes marques"],
+      "Un entretien r\u00e9gulier garantit la long\u00e9vit\u00e9 et les performances de vos \u00e9quipements. Nous proposons des contrats annuels pour votre tranquillit\u00e9.",
+    features: ["Contrat annuel", "Pr\u00e9ventif & curatif", "Toutes marques", "Conformit\u00e9 r\u00e9glementaire"],
+    gradient: "from-[#5b9bd5] to-[#4a90c2]",
   },
   {
-    num: "04",
     icon: AlertTriangle,
-    title: "Dépannage & Diagnostic",
+    title: "D\u00e9pannage rapide",
     description:
-      "Intervention rapide en cas de panne ou dysfonctionnement. Diagnostic précis et réparation sur toutes marques\u00a0: Daikin, Mitsubishi, Heiwa, Ariston et plus.",
-    tags: ["Intervention rapide", "Toutes marques", "Diagnostic", "Réparation"],
+      "Panne, dysfonctionnement ou urgence\u00a0? Nous intervenons rapidement pour diagnostiquer et r\u00e9parer votre installation. Disponible 7 jours sur 7.",
+    features: ["Intervention rapide", "Diagnostic pr\u00e9cis", "7j/7", "Toutes marques"],
+    gradient: "from-[#4a90c2] to-[#1e3a5f]",
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 sm:py-28 bg-white">
+    <section id="services" className="py-24 sm:py-32 bg-[#f8fbff]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide uppercase bg-primary/10 text-primary mb-4">
-            Nos services
+        {/* Section header */}
+        <div className="max-w-3xl mb-20">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide uppercase bg-[#5b9bd5]/10 text-[#5b9bd5] mb-5">
+            <Settings className="h-3.5 w-3.5" />
+            Nos m&eacute;tiers
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-dark">
-            Des solutions complètes pour votre confort
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1e3a5f] leading-tight">
+            Des solutions compl&egrave;tes,
+            <br />
+            <span className="text-gradient">un seul interlocuteur.</span>
           </h2>
-          <p className="mt-4 text-gray-600 text-lg">
-            De l&apos;installation au dépannage, OC&nbsp;CLIM vous accompagne à
-            chaque étape avec expertise et réactivité.
+          <p className="mt-5 text-lg text-[#5a7394] leading-relaxed max-w-2xl">
+            De l&apos;installation au d&eacute;pannage, OC&nbsp;CLIM vous accompagne
+            avec un service fiable et personnalis&eacute;. Chaque projet est unique,
+            chaque solution est sur-mesure.
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service) => {
+        {/* Services grid */}
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+          {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <div
-                key={service.num}
-                className="group relative bg-light rounded-2xl p-7 hover:bg-primary hover:shadow-xl hover:shadow-primary/15 hover:-translate-y-1 transition-all duration-300"
+                key={service.title}
+                className="group relative bg-white rounded-3xl p-8 lg:p-10 shadow-[0_4px_30px_rgba(30,58,95,0.06)] border border-[#e5eef7] hover:shadow-[0_8px_40px_rgba(30,58,95,0.12)] hover:-translate-y-1 transition-all duration-500"
               >
                 {/* Corner number */}
-                <span className="absolute top-5 right-5 text-5xl font-black leading-none select-none text-gray-200/80 transition-colors duration-300 group-hover:text-white/15">
-                  {service.num}
+                <span className="absolute top-6 right-8 text-7xl font-black text-[#e5eef7] select-none leading-none transition-colors duration-500 group-hover:text-[#5b9bd5]/10">
+                  0{index + 1}
                 </span>
 
                 {/* Icon */}
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:bg-white/20 group-hover:text-white transition-colors duration-300">
-                  <Icon className="w-7 h-7" strokeWidth={1.8} />
+                <div className={`relative inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${service.gradient} shadow-lg shadow-[#1e3a5f]/15 group-hover:scale-110 transition-transform duration-500`}>
+                  <Icon className="h-6 w-6 text-white" strokeWidth={1.8} />
                 </div>
 
                 {/* Title */}
-                <h3 className="mt-5 text-lg font-bold text-dark group-hover:text-white transition-colors duration-300">
+                <h3 className="mt-6 text-xl font-bold text-[#1e3a5f]">
                   {service.title}
                 </h3>
 
                 {/* Description */}
-                <p className="mt-2 text-sm text-gray-600 leading-relaxed group-hover:text-white/80 transition-colors duration-300">
+                <p className="mt-3 text-[#5a7394] leading-relaxed">
                   {service.description}
                 </p>
 
-                {/* Tags */}
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {service.tags.map((tag) => (
+                {/* Features */}
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {service.features.map((feature) => (
                     <span
-                      key={tag}
-                      className="text-xs bg-primary/10 text-primary px-2.5 py-1 rounded-full group-hover:bg-white/20 group-hover:text-white transition-colors duration-300"
+                      key={feature}
+                      className="inline-flex items-center text-xs font-medium bg-[#f0f6ff] text-[#1e3a5f] px-3 py-1.5 rounded-full border border-[#e5eef7]"
                     >
-                      {tag}
+                      {feature}
                     </span>
                   ))}
                 </div>
+
+                {/* Link */}
+                <a href="#contact" className="inline-flex items-center gap-1.5 mt-6 text-sm font-semibold text-[#5b9bd5] group-hover:text-[#1e3a5f] transition-colors duration-300">
+                  Demander un devis
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                </a>
               </div>
             );
           })}

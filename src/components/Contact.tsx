@@ -1,32 +1,36 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { Phone, MapPin, Clock, Send, CheckCircle, Mail } from "lucide-react";
 
 const infoCards = [
   {
-    icon: Phone,
-    title: "Téléphone",
-    description: "Contactez-nous via le formulaire",
-  },
-  {
     icon: MapPin,
-    title: "Zone d'intervention",
-    description: "Cestas (33610) & tout Bordeaux Métropole",
+    title: "Adresse",
+    lines: ["2B Chemin du Chibaley", "33610 Cestas"],
+    color: "from-[#1e3a5f] to-[#2b4a73]",
   },
   {
     icon: Clock,
-    title: "Disponibilité",
-    description: "7j/7 — Week-ends et jours fériés",
+    title: "Disponibilit\u00e9",
+    lines: ["7 jours sur 7", "Week-ends et jours f\u00e9ri\u00e9s"],
+    color: "from-[#2b4a73] to-[#5b9bd5]",
+  },
+  {
+    icon: Phone,
+    title: "R\u00e9activit\u00e9",
+    lines: ["R\u00e9ponse en 22 min en moyenne", "Devis gratuit & sans engagement"],
+    color: "from-[#5b9bd5] to-[#4a90c2]",
   },
 ];
 
-const services = [
+const serviceOptions = [
   "Installation climatisation",
-  "Pompe à chaleur Air/Air",
-  "Pompe à chaleur Air/Eau",
+  "Pompe \u00e0 chaleur Air/Air",
+  "Pompe \u00e0 chaleur Air/Eau",
   "Entretien & maintenance",
-  "Dépannage urgent",
+  "D\u00e9pannage urgent",
+  "Autre demande",
 ];
 
 export default function Contact() {
@@ -50,9 +54,7 @@ export default function Contact() {
   }, [submitted]);
 
   function handleChange(
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
@@ -63,67 +65,80 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-24 sm:py-32 bg-[#f8fbff] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0f172a]">
-            Demandez votre devis gratuit
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide uppercase bg-[#5b9bd5]/10 text-[#5b9bd5] mb-5">
+            <Mail className="h-3.5 w-3.5" />
+            Contact
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1e3a5f] leading-tight">
+            Parlons de votre projet
           </h2>
-          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-            Décrivez votre projet et recevez une réponse rapide. Devis gratuit
-            et sans engagement.
+          <p className="mt-5 text-lg text-[#5a7394] leading-relaxed">
+            D\u00e9crivez votre besoin et recevez une r\u00e9ponse rapide.
+            Devis gratuit et sans engagement.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-10">
-          {/* Left column — info cards */}
+          {/* Left: info cards */}
           <div className="lg:col-span-2 flex flex-col gap-4">
             {infoCards.map((card) => {
               const Icon = card.icon;
               return (
                 <div
                   key={card.title}
-                  className="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-sm border border-gray-100"
+                  className="flex items-start gap-4 bg-white rounded-2xl p-6 shadow-[0_2px_20px_rgba(30,58,95,0.04)] border border-[#e5eef7] hover:shadow-lg transition-shadow duration-300"
                 >
-                  <div className="w-12 h-12 rounded-full bg-[#0057b8]/10 flex items-center justify-center shrink-0">
-                    <Icon className="w-6 h-6 text-[#0057b8]" />
+                  <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${card.color} flex items-center justify-center shrink-0 shadow-lg shadow-[#1e3a5f]/10`}>
+                    <Icon className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-[#0f172a]">
-                      {card.title}
-                    </h3>
-                    <p className="text-sm text-gray-600 mt-1">
-                      {card.description}
-                    </p>
+                    <h3 className="font-bold text-[#1e3a5f]">{card.title}</h3>
+                    {card.lines.map((line, i) => (
+                      <p key={i} className="text-sm text-[#5a7394] mt-0.5">{line}</p>
+                    ))}
                   </div>
                 </div>
               );
             })}
+
+            {/* Map placeholder */}
+            <div className="bg-white rounded-2xl border border-[#e5eef7] overflow-hidden shadow-[0_2px_20px_rgba(30,58,95,0.04)] flex-1 min-h-[200px]">
+              <div className="h-full flex flex-col items-center justify-center p-6 text-center bg-[#f0f6ff]">
+                <MapPin className="h-8 w-8 text-[#5b9bd5] mb-3" />
+                <p className="font-bold text-[#1e3a5f]">Zone d&apos;intervention</p>
+                <p className="text-sm text-[#5a7394] mt-1">
+                  Cestas, Bordeaux, Pessac, Talence,
+                  <br />
+                  M\u00e9rignac, Gradignan et alentours
+                </p>
+              </div>
+            </div>
           </div>
 
-          {/* Right column — form */}
-          <div className="lg:col-span-3 bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+          {/* Right: form */}
+          <div className="lg:col-span-3 bg-white rounded-3xl p-8 lg:p-10 shadow-[0_4px_30px_rgba(30,58,95,0.06)] border border-[#e5eef7]">
             {submitted ? (
-              <div className="flex flex-col items-center justify-center h-full py-12 animate-fade-in">
-                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
-                  <CheckCircle className="w-9 h-9 text-green-600" />
+              <div className="flex flex-col items-center justify-center h-full py-16 animate-fade-in">
+                <div className="w-20 h-20 rounded-full bg-emerald-50 flex items-center justify-center mb-6">
+                  <CheckCircle className="w-10 h-10 text-emerald-500" />
                 </div>
-                <h3 className="text-xl font-semibold text-[#0f172a] text-center">
-                  Votre demande a bien été envoyée !
+                <h3 className="text-2xl font-bold text-[#1e3a5f] text-center">
+                  Demande envoy\u00e9e !
                 </h3>
-                <p className="text-gray-600 mt-2 text-center max-w-md">
-                  Nous vous recontacterons dans les plus brefs délais.
+                <p className="text-[#5a7394] mt-3 text-center max-w-md">
+                  Merci pour votre confiance. Can vous recontactera dans les plus brefs d\u00e9lais.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label
-                      htmlFor="nom"
-                      className="block text-sm font-medium text-[#0f172a] mb-1.5"
-                    >
-                      Nom
+                    <label htmlFor="nom" className="block text-sm font-semibold text-[#1e3a5f] mb-2">
+                      Nom complet
                     </label>
                     <input
                       id="nom"
@@ -133,15 +148,12 @@ export default function Contact() {
                       value={form.nom}
                       onChange={handleChange}
                       placeholder="Votre nom"
-                      className="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0057b8]/40 focus:border-[#0057b8] transition"
+                      className="w-full rounded-xl border border-[#e5eef7] bg-[#f8fbff] px-4 py-3 text-sm text-[#1e3a5f] placeholder:text-[#a8bcd2] focus:outline-none focus:ring-2 focus:ring-[#5b9bd5]/30 focus:border-[#5b9bd5] transition"
                     />
                   </div>
                   <div>
-                    <label
-                      htmlFor="telephone"
-                      className="block text-sm font-medium text-[#0f172a] mb-1.5"
-                    >
-                      Téléphone
+                    <label htmlFor="telephone" className="block text-sm font-semibold text-[#1e3a5f] mb-2">
+                      T\u00e9l\u00e9phone
                     </label>
                     <input
                       id="telephone"
@@ -151,16 +163,13 @@ export default function Contact() {
                       value={form.telephone}
                       onChange={handleChange}
                       placeholder="06 00 00 00 00"
-                      className="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0057b8]/40 focus:border-[#0057b8] transition"
+                      className="w-full rounded-xl border border-[#e5eef7] bg-[#f8fbff] px-4 py-3 text-sm text-[#1e3a5f] placeholder:text-[#a8bcd2] focus:outline-none focus:ring-2 focus:ring-[#5b9bd5]/30 focus:border-[#5b9bd5] transition"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-[#0f172a] mb-1.5"
-                  >
+                  <label htmlFor="email" className="block text-sm font-semibold text-[#1e3a5f] mb-2">
                     Email
                   </label>
                   <input
@@ -171,16 +180,13 @@ export default function Contact() {
                     value={form.email}
                     onChange={handleChange}
                     placeholder="votre@email.com"
-                    className="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0057b8]/40 focus:border-[#0057b8] transition"
+                    className="w-full rounded-xl border border-[#e5eef7] bg-[#f8fbff] px-4 py-3 text-sm text-[#1e3a5f] placeholder:text-[#a8bcd2] focus:outline-none focus:ring-2 focus:ring-[#5b9bd5]/30 focus:border-[#5b9bd5] transition"
                   />
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="service"
-                    className="block text-sm font-medium text-[#0f172a] mb-1.5"
-                  >
-                    Service
+                  <label htmlFor="service" className="block text-sm font-semibold text-[#1e3a5f] mb-2">
+                    Type de service
                   </label>
                   <select
                     id="service"
@@ -188,25 +194,18 @@ export default function Contact() {
                     required
                     value={form.service}
                     onChange={handleChange}
-                    className="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0057b8]/40 focus:border-[#0057b8] transition bg-white"
+                    className="w-full rounded-xl border border-[#e5eef7] bg-[#f8fbff] px-4 py-3 text-sm text-[#1e3a5f] focus:outline-none focus:ring-2 focus:ring-[#5b9bd5]/30 focus:border-[#5b9bd5] transition"
                   >
-                    <option value="" disabled>
-                      Choisir un service
-                    </option>
-                    {services.map((s) => (
-                      <option key={s} value={s}>
-                        {s}
-                      </option>
+                    <option value="" disabled>Choisir un service</option>
+                    {serviceOptions.map((s) => (
+                      <option key={s} value={s}>{s}</option>
                     ))}
                   </select>
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-[#0f172a] mb-1.5"
-                  >
-                    Message
+                  <label htmlFor="message" className="block text-sm font-semibold text-[#1e3a5f] mb-2">
+                    Votre message
                   </label>
                   <textarea
                     id="message"
@@ -215,18 +214,22 @@ export default function Contact() {
                     required
                     value={form.message}
                     onChange={handleChange}
-                    placeholder="Décrivez votre projet ou votre besoin..."
-                    className="w-full rounded-lg border border-gray-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0057b8]/40 focus:border-[#0057b8] transition resize-none"
+                    placeholder="D\u00e9crivez votre projet ou votre besoin..."
+                    className="w-full rounded-xl border border-[#e5eef7] bg-[#f8fbff] px-4 py-3 text-sm text-[#1e3a5f] placeholder:text-[#a8bcd2] focus:outline-none focus:ring-2 focus:ring-[#5b9bd5]/30 focus:border-[#5b9bd5] transition resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 bg-[#0057b8] hover:bg-[#004494] text-white font-semibold py-3 rounded-lg transition-colors duration-200"
+                  className="w-full flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#1e3a5f] to-[#5b9bd5] text-white font-semibold py-3.5 rounded-xl shadow-lg shadow-[#1e3a5f]/20 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
                 >
-                  <Send className="w-5 h-5" />
-                  Envoyer la demande de devis
+                  <Send className="w-4 h-4" />
+                  Envoyer ma demande
                 </button>
+
+                <p className="text-center text-xs text-[#a8bcd2]">
+                  Devis 100% gratuit &middot; R\u00e9ponse sous 24h &middot; Sans engagement
+                </p>
               </form>
             )}
           </div>
