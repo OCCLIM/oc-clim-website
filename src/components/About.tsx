@@ -92,19 +92,7 @@ export default function About() {
                 })}
               </div>
 
-              {/* Brands */}
-              <div className="mt-10 pt-8 border-t border-[#E5E5E5]">
-                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#999] mb-3">
-                  Marques partenaires
-                </p>
-                <div className="flex gap-6">
-                  {["Daikin", "Mitsubishi", "Heiwa", "Ariston", "Atlantic"].map((b) => (
-                    <span key={b} className="text-sm font-semibold text-[#BBB] hover:text-[#111] transition-colors">
-                      {b}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              {/* Brands - now in dedicated BrandMarquee section */}
             </div>
           </ScrollReveal>
         </div>

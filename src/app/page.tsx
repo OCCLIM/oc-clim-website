@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import BrandMarquee from "@/components/BrandMarquee";
 import Services from "@/components/Services";
 import Mission from "@/components/Mission";
 import Intervention from "@/components/Intervention";
@@ -15,6 +16,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <BrandMarquee />
         <Services />
         <Mission />
         <Intervention />
