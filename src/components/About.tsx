@@ -35,8 +35,8 @@ export default function About() {
                     const Icon = s.icon;
                     return (
                       <div key={s.label} className="text-center">
-                        <Icon className="mx-auto mb-1.5 h-4 w-4 text-[#111]" />
-                        <p className="text-xl font-extrabold text-[#111]">{s.value}</p>
+                        <Icon className="mx-auto mb-1.5 h-4 w-4 text-[#1C1C1E]" />
+                        <p className="text-xl font-extrabold text-[#1C1C1E]">{s.value}</p>
                         <p className="text-[10px] text-[#999] font-medium">{s.label}</p>
                       </div>
                     );
@@ -52,18 +52,18 @@ export default function About() {
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#999] mb-4">
                 Qui sommes-nous
               </p>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#111] leading-tight mb-8">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1C1C1E] leading-tight mb-8">
                 Un artisan passionné, proche de vous.
               </h2>
 
               <div className="space-y-5 text-[#666] text-base leading-relaxed">
                 <p>
-                  Derrière <strong className="text-[#111]">OC CLIM</strong>, il y a une conviction :
+                  Derrière <strong className="text-[#1C1C1E]">OC CLIM</strong>, il y a une conviction :
                   chacun mérite un air sain et un confort thermique optimal chez soi.
                 </p>
                 <p>
-                  <strong className="text-[#111]">Can Oruc</strong>, fondateur et gérant, est technicien
-                  diplômé d'un Bac Pro TFCA. Il intervient sur toute la <strong className="text-[#111]">métropole bordelaise</strong> et ses alentours avec réactivité et professionnalisme.
+                  <strong className="text-[#1C1C1E]">Can Oruc</strong>, fondateur et gérant, est technicien
+                  diplômé d'un Bac Pro TFCA. Il intervient sur toute la <strong className="text-[#1C1C1E]">métropole bordelaise</strong> et ses alentours avec réactivité et professionnalisme.
                 </p>
                 <p>
                   Un interlocuteur unique, des conseils honnêtes, et un travail soigné. Pas de sous-traitance
@@ -83,7 +83,7 @@ export default function About() {
                   return (
                     <div key={c.text} className="flex items-center gap-3">
                       <div className="h-9 w-9 rounded-lg bg-[#F0F0F0] flex items-center justify-center shrink-0">
-                        <Icon className="h-4 w-4 text-[#111]" />
+                        <Icon className="h-4 w-4 text-[#1C1C1E]" />
                       </div>
                       <span className="text-sm font-medium text-[#444]">{c.text}</span>
                     </div>

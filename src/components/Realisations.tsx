@@ -36,7 +36,7 @@ export default function Realisations() {
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#999] mb-4">
               Nos réalisations
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#111]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1C1C1E]">
               Des projets concrets
             </h2>
           </div>
@@ -58,7 +58,7 @@ export default function Realisations() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
                 <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-full group-hover:translate-y-0 transition-transform duration-400">
-                  <span className="inline-block text-[10px] font-bold uppercase tracking-wider bg-white text-[#111] px-2 py-0.5 rounded mb-1">
+                  <span className="inline-block text-[10px] font-bold uppercase tracking-wider bg-white text-[#1C1C1E] px-2 py-0.5 rounded mb-1">
                     {p.tag}
                   </span>
                   <p className="text-white text-xs font-medium">{p.title}</p>

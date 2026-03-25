@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Mission() {
   return (
-    <section className="relative py-28 sm:py-36 bg-[#111] overflow-hidden">
+    <section className="relative py-28 sm:py-36 bg-[#1C1C1E] overflow-hidden">
       {/* Decorative SVG circle */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
         <svg width="500" height="500" className="animate-rotate-dash opacity-[0.06]">

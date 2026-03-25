@@ -86,7 +86,7 @@ export default function BrandMarquee() {
               <button
                 key={`${brand.name}-${i}`}
                 onClick={() => setSelected(brand)}
-                className="flex-shrink-0 mx-8 text-sm font-bold tracking-[0.15em] text-[#ccc] hover:text-[#111] transition-colors duration-300 cursor-pointer select-none"
+                className="flex-shrink-0 mx-8 text-sm font-bold tracking-[0.15em] text-[#ccc] hover:text-[#1C1C1E] transition-colors duration-300 cursor-pointer select-none"
               >
                 {brand.name}
               </button>
@@ -134,12 +134,12 @@ export default function BrandMarquee() {
                 <div className="flex items-center gap-3 text-sm">
                   <Calendar className="h-4 w-4 text-[#999] shrink-0" />
                   <span className="text-[#777]">Fondé en</span>
-                  <span className="font-semibold text-[#111]">{selected.founded}</span>
+                  <span className="font-semibold text-[#1C1C1E]">{selected.founded}</span>
                 </div>
                 <div className="flex items-center gap-3 text-sm">
                   <Award className="h-4 w-4 text-[#999] shrink-0" />
                   <span className="text-[#777]">Spécialité</span>
-                  <span className="font-semibold text-[#111]">{selected.specialty}</span>
+                  <span className="font-semibold text-[#1C1C1E]">{selected.specialty}</span>
                 </div>
               </div>
 
@@ -150,7 +150,7 @@ export default function BrandMarquee() {
                 <a
                   href="#contact"
                   onClick={() => setSelected(null)}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#111] hover:text-[#555] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#1C1C1E] hover:text-[#555] transition-colors"
                 >
                   Demander un devis
                   <ArrowRight className="h-3.5 w-3.5" />
