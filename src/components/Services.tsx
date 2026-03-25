@@ -44,7 +44,7 @@ export default function Services() {
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#999] mb-4">
               Nos métiers
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#2A2A2E] leading-tight max-w-3xl">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#333338] leading-tight max-w-3xl">
               Des solutions climatiques complètes
             </h2>
           </ScrollReveal>
@@ -90,7 +90,7 @@ export default function Services() {
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#999] mb-4">
                 Nos solutions
               </p>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#2A2A2E]">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#333338]">
                 Explorez notre expertise
               </h2>
             </div>
@@ -101,11 +101,11 @@ export default function Services() {
               const Icon = s.icon;
               return (
                 <ScrollReveal key={s.title} delay={i * 80}>
-                  <div className="group text-center p-6 rounded-2xl border border-[#E5E5E5] bg-white hover:border-[#2A2A2E]/15 hover:shadow-lg transition-all duration-300 cursor-pointer">
-                    <div className="mx-auto h-10 w-10 rounded-xl bg-[#F0F0F0] flex items-center justify-center mb-3 group-hover:bg-[#2A2A2E] transition-colors duration-300">
-                      <Icon className="h-5 w-5 text-[#2A2A2E] group-hover:text-white transition-colors duration-300" strokeWidth={1.8} />
+                  <div className="group text-center p-6 rounded-2xl border border-[#E5E5E5] bg-white hover:border-[#333338]/15 hover:shadow-lg transition-all duration-300 cursor-pointer">
+                    <div className="mx-auto h-10 w-10 rounded-xl bg-[#F0F0F0] flex items-center justify-center mb-3 group-hover:bg-[#333338] transition-colors duration-300">
+                      <Icon className="h-5 w-5 text-[#333338] group-hover:text-white transition-colors duration-300" strokeWidth={1.8} />
                     </div>
-                    <h3 className="text-sm font-bold text-[#2A2A2E] mb-1">{s.title}</h3>
+                    <h3 className="text-sm font-bold text-[#333338] mb-1">{s.title}</h3>
                     <p className="text-xs text-[#999]">{s.desc}</p>
                   </div>
                 </ScrollReveal>

@@ -51,7 +51,7 @@ export default function Contact() {
   }
 
   const inputClass =
-    "w-full rounded-lg border border-[#E5E5E5] bg-white px-4 py-3.5 text-sm text-[#2A2A2E] placeholder:text-[#BBB] focus:outline-none focus:ring-2 focus:ring-[#111]/10 focus:border-[#2A2A2E] transition";
+    "w-full rounded-lg border border-[#E5E5E5] bg-white px-4 py-3.5 text-sm text-[#333338] placeholder:text-[#BBB] focus:outline-none focus:ring-2 focus:ring-[#111]/10 focus:border-[#333338] transition";
 
   return (
     <section id="contact" className="py-24 sm:py-32 bg-white">
@@ -61,7 +61,7 @@ export default function Contact() {
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#999] mb-4">
               Contact
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#2A2A2E]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#333338]">
               Estimation de votre projet
             </h2>
             <p className="mt-4 text-lg text-[#777]">
@@ -116,7 +116,7 @@ export default function Contact() {
                   <div className="h-16 w-16 rounded-full bg-emerald-50 flex items-center justify-center mb-5">
                     <CheckCircle className="h-8 w-8 text-emerald-500" />
                   </div>
-                  <h3 className="text-xl font-bold text-[#2A2A2E]">Demande envoyée !</h3>
+                  <h3 className="text-xl font-bold text-[#333338]">Demande envoyée !</h3>
                   <p className="text-[#777] mt-2 text-center max-w-sm">
                     Merci pour votre confiance. Can vous recontactera dans les plus brefs délais.
                   </p>
@@ -154,7 +154,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full flex items-center justify-center gap-2 bg-[#2A2A2E] text-white font-bold py-4 rounded-lg text-sm uppercase tracking-wide hover:bg-[#4A4A4E] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full flex items-center justify-center gap-2 bg-[#333338] text-white font-bold py-4 rounded-lg text-sm uppercase tracking-wide hover:bg-[#535358] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {loading ? (
                       <>

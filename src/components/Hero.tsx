@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-[100svh] flex items-end overflow-hidden">
       {/* Background noir pur — identique au fond du logo */}
-      <div className="absolute inset-0 bg-[#2A2A2E]" />
+      <div className="absolute inset-0 bg-[#333338]" />
 
       {/* Logo noir et blanc immersif en fond — image telle quelle */}
       {/* Mobile: en haut à droite, petit, ne gêne pas le texte */}
@@ -93,7 +93,7 @@ export default function Hero() {
               <div className="mt-6 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 animate-fade-in-up delay-400">
                 <a
                   href="tel:0767117530"
-                  className="inline-flex items-center justify-center gap-2.5 bg-white text-[#2A2A2E] px-6 py-3.5 sm:px-7 sm:py-4 rounded-xl text-sm font-bold tracking-wide uppercase hover:bg-white/90 transition-all"
+                  className="inline-flex items-center justify-center gap-2.5 bg-white text-[#333338] px-6 py-3.5 sm:px-7 sm:py-4 rounded-xl text-sm font-bold tracking-wide uppercase hover:bg-white/90 transition-all"
                 >
                   <Phone className="h-4 w-4" />
                   07 67 11 75 30

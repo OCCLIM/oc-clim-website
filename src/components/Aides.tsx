@@ -48,7 +48,7 @@ export default function Aides() {
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#999] mb-4">
                   Financez vos travaux
                 </p>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#2A2A2E] leading-tight">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#333338] leading-tight">
                   Aides & subventions
                 </h2>
                 <p className="mt-4 text-[#777] max-w-xl leading-relaxed">
@@ -58,7 +58,7 @@ export default function Aides() {
               </div>
               <button
                 onClick={() => setShowModal(true)}
-                className="shrink-0 inline-flex items-center gap-2 bg-[#2A2A2E] text-white font-semibold px-6 py-3.5 rounded-xl text-sm hover:bg-[#4A4A4E] transition-colors"
+                className="shrink-0 inline-flex items-center gap-2 bg-[#333338] text-white font-semibold px-6 py-3.5 rounded-xl text-sm hover:bg-[#535358] transition-colors"
               >
                 Suis-je éligible ?
                 <ArrowRight className="h-4 w-4" />
@@ -72,18 +72,18 @@ export default function Aides() {
               const isOpen = openIndex === i;
               return (
                 <ScrollReveal key={aide.title} delay={i * 120}>
-                  <div className="bg-white rounded-2xl border border-[#E5E5E5] overflow-hidden hover:shadow-lg hover:border-[#2A2A2E]/10 transition-all duration-300">
+                  <div className="bg-white rounded-2xl border border-[#E5E5E5] overflow-hidden hover:shadow-lg hover:border-[#333338]/10 transition-all duration-300">
                     <div className="p-7">
                       <div className={`h-11 w-11 rounded-xl ${aide.color} flex items-center justify-center mb-5`}>
                         <Icon className="h-5 w-5 text-white" strokeWidth={2} />
                       </div>
-                      <h3 className="text-lg font-bold text-[#2A2A2E] mb-1">{aide.title}</h3>
-                      <p className="text-sm font-semibold text-[#2A2A2E]/60 mb-3">{aide.subtitle}</p>
+                      <h3 className="text-lg font-bold text-[#333338] mb-1">{aide.title}</h3>
+                      <p className="text-sm font-semibold text-[#333338]/60 mb-3">{aide.subtitle}</p>
                       <p className="text-sm text-[#777] leading-relaxed">{aide.description}</p>
 
                       <button
                         onClick={() => setOpenIndex(isOpen ? null : i)}
-                        className="mt-5 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#2A2A2E] hover:text-[#555] transition-colors"
+                        className="mt-5 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#333338] hover:text-[#555] transition-colors"
                       >
                         {isOpen ? "Masquer" : "Détails"}
                         <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
@@ -112,7 +112,7 @@ export default function Aides() {
           </div>
 
           <ScrollReveal delay={400}>
-            <div className="mt-10 bg-[#2A2A2E] rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="mt-10 bg-[#333338] rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
               <div>
                 <h3 className="text-lg font-bold text-white mb-1">OC CLIM s'occupe de tout</h3>
                 <p className="text-sm text-white/50">
@@ -121,7 +121,7 @@ export default function Aides() {
               </div>
               <a
                 href="#contact"
-                className="shrink-0 inline-flex items-center gap-2 bg-white text-[#2A2A2E] font-semibold px-6 py-3 rounded-xl text-sm hover:bg-white/90 transition-colors"
+                className="shrink-0 inline-flex items-center gap-2 bg-white text-[#333338] font-semibold px-6 py-3 rounded-xl text-sm hover:bg-white/90 transition-colors"
               >
                 Demander une simulation
                 <ArrowRight className="h-4 w-4" />
@@ -138,7 +138,7 @@ export default function Aides() {
             <button onClick={() => setShowModal(false)} className="absolute top-4 right-4 h-8 w-8 rounded-full bg-[#f5f5f5] hover:bg-[#eee] flex items-center justify-center">
               <X className="h-4 w-4" />
             </button>
-            <h3 className="text-xl font-extrabold text-[#2A2A2E] mb-2">Vérifiez votre éligibilité</h3>
+            <h3 className="text-xl font-extrabold text-[#333338] mb-2">Vérifiez votre éligibilité</h3>
             <p className="text-sm text-[#777] mb-6">Contactez-nous pour une simulation gratuite et personnalisée de vos aides.</p>
             <div className="space-y-3 mb-6">
               {[
@@ -154,7 +154,7 @@ export default function Aides() {
               ))}
             </div>
             <p className="text-xs text-[#999] mb-4">Si vous cochez au moins 2 critères, vous êtes probablement éligible.</p>
-            <a href="#contact" onClick={() => setShowModal(false)} className="w-full flex items-center justify-center gap-2 bg-[#2A2A2E] text-white font-bold py-3.5 rounded-xl text-sm hover:bg-[#4A4A4E] transition-colors">
+            <a href="#contact" onClick={() => setShowModal(false)} className="w-full flex items-center justify-center gap-2 bg-[#333338] text-white font-bold py-3.5 rounded-xl text-sm hover:bg-[#535358] transition-colors">
               Demander ma simulation gratuite
               <ArrowRight className="h-4 w-4" />
             </a>

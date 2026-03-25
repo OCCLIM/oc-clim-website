@@ -32,7 +32,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="avis" className="py-24 sm:py-32 bg-[#2A2A2E]">
+    <section id="avis" className="py-24 sm:py-32 bg-[#333338]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ScrollReveal>
           <div className="text-center mb-16">

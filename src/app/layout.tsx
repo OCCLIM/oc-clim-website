@@ -38,7 +38,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fr" className={`${poppins.variable} ${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-[#FAFAFA] text-[#2A2A2E]">
+      <body className="min-h-full flex flex-col bg-[#FAFAFA] text-[#333338]">
         {children}
       </body>
     </html>

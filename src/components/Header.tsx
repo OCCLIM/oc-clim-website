@@ -58,7 +58,7 @@ export default function Header() {
               />
             </div>
             <span className={`text-2xl font-extrabold tracking-tight transition-colors duration-300 ${
-              showWhiteBg ? "text-[#2A2A2E]" : "text-white"
+              showWhiteBg ? "text-[#333338]" : "text-white"
             }`}>
               OC CLIM
             </span>
@@ -72,7 +72,7 @@ export default function Header() {
                 href={link.href}
                 className={`px-3.5 py-2 text-[13px] font-medium transition-colors rounded-md ${
                   showWhiteBg
-                    ? "text-[#444444] hover:text-[#2A2A2E] hover:bg-black/5"
+                    ? "text-[#444444] hover:text-[#333338] hover:bg-black/5"
                     : "text-white/80 hover:text-white hover:bg-white/10"
                 }`}
               >
@@ -86,8 +86,8 @@ export default function Header() {
             href="tel:0767117530"
             className={`hidden lg:inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-all ${
               showWhiteBg
-                ? "bg-[#2A2A2E] text-white hover:bg-[#4A4A4E]"
-                : "bg-white text-[#2A2A2E] hover:bg-white/90"
+                ? "bg-[#333338] text-white hover:bg-[#535358]"
+                : "bg-white text-[#333338] hover:bg-white/90"
             }`}
           >
             <Phone className="h-3.5 w-3.5" />
@@ -98,7 +98,7 @@ export default function Header() {
           <button
             onClick={() => setOpen(!open)}
             className={`lg:hidden flex h-9 w-9 items-center justify-center rounded-md transition-colors ${
-              showWhiteBg ? "text-[#2A2A2E] hover:bg-slate-100" : "text-white hover:bg-white/10"
+              showWhiteBg ? "text-[#333338] hover:bg-slate-100" : "text-white hover:bg-white/10"
             }`}
             aria-label={open ? "Fermer" : "Menu"}
           >
@@ -121,7 +121,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="px-4 py-3 rounded-md text-sm font-medium text-[#444444] hover:bg-slate-50 hover:text-[#2A2A2E]"
+                  className="px-4 py-3 rounded-md text-sm font-medium text-[#444444] hover:bg-slate-50 hover:text-[#333338]"
                 >
                   {link.label}
                 </a>
@@ -129,7 +129,7 @@ export default function Header() {
               <a
                 href="tel:0767117530"
                 onClick={() => setOpen(false)}
-                className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-[#2A2A2E] px-5 py-3 text-sm font-semibold text-white"
+                className="mt-4 flex items-center justify-center gap-2 rounded-lg bg-[#333338] px-5 py-3 text-sm font-semibold text-white"
               >
                 <Phone className="h-4 w-4" />
                 07 67 11 75 30
