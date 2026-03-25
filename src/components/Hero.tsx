@@ -16,8 +16,21 @@ export default function Hero() {
         {/* Glow subtil — desktop only */}
         <div className="hidden lg:block absolute top-1/2 right-[15%] -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-white/[0.04] blur-[100px] animate-logo-breathe" />
 
-        {/* Logo — mobile: haut-droite petit / desktop: droite grand */}
-        <div className="absolute top-20 right-4 w-[45vw] h-[45vw] opacity-[0.15] sm:opacity-[0.2] sm:top-1/2 sm:right-[5%] sm:-translate-y-1/2 sm:w-[35vw] sm:h-[35vw] lg:opacity-100 lg:w-[45vw] lg:h-[45vw] xl:w-[40vw] xl:h-[40vw] max-w-[700px] max-h-[700px] animate-logo-3d" style={{ transformStyle: "preserve-3d" }}>
+        {/* Logo mobile: blanc sur transparent, bien visible */}
+        <div className="lg:hidden absolute top-24 right-4 w-[40vw] h-[40vw] opacity-30 animate-logo-3d" style={{ transformStyle: "preserve-3d" }}>
+          <Image
+            src="/images/logo-white.png"
+            alt=""
+            width={1024}
+            height={1024}
+            className="w-full h-full object-contain select-none"
+            priority
+            aria-hidden="true"
+          />
+        </div>
+
+        {/* Logo desktop: noir et blanc tel quel, grand */}
+        <div className="hidden lg:block absolute top-1/2 right-[5%] -translate-y-1/2 w-[45vw] h-[45vw] xl:w-[40vw] xl:h-[40vw] max-w-[700px] max-h-[700px] animate-logo-3d" style={{ transformStyle: "preserve-3d" }}>
           <Image
             src="/images/logo-dark.png"
             alt=""
