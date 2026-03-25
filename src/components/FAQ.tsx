@@ -50,7 +50,7 @@ export default function FAQ() {
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#999] mb-4">
               Questions fréquentes
             </p>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#1C1C1E]">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#2A2A2E]">
               Tout savoir sur nos services
             </h2>
             <p className="mt-4 text-[#777] max-w-lg mx-auto">
@@ -65,7 +65,7 @@ export default function FAQ() {
             return (
               <ScrollReveal key={i} delay={i * 60}>
                 <div className={`bg-white rounded-xl border transition-all duration-300 ${
-                  isOpen ? "border-[#1C1C1E]/15 shadow-md" : "border-[#E5E5E5] hover:border-[#1C1C1E]/10"
+                  isOpen ? "border-[#2A2A2E]/15 shadow-md" : "border-[#E5E5E5] hover:border-[#2A2A2E]/10"
                 }`}>
                   <button
                     onClick={() => setOpenIndex(isOpen ? null : i)}
@@ -73,10 +73,10 @@ export default function FAQ() {
                   >
                     <div className="flex items-center gap-3">
                       <MessageCircleQuestion className={`h-5 w-5 shrink-0 transition-colors duration-300 ${
-                        isOpen ? "text-[#1C1C1E]" : "text-[#ccc]"
+                        isOpen ? "text-[#2A2A2E]" : "text-[#ccc]"
                       }`} />
                       <span className={`text-sm sm:text-base font-semibold transition-colors duration-300 ${
-                        isOpen ? "text-[#1C1C1E]" : "text-[#444]"
+                        isOpen ? "text-[#2A2A2E]" : "text-[#444]"
                       }`}>
                         {faq.question}
                       </span>
@@ -105,7 +105,7 @@ export default function FAQ() {
             <p className="text-sm text-[#999] mb-4">Vous avez une autre question ?</p>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 bg-[#1C1C1E] text-white font-semibold px-6 py-3 rounded-xl text-sm hover:bg-[#3C3C3E] transition-colors"
+              className="inline-flex items-center gap-2 bg-[#2A2A2E] text-white font-semibold px-6 py-3 rounded-xl text-sm hover:bg-[#4A4A4E] transition-colors"
             >
               Contactez-nous
             </a>

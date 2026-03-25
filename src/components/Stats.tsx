@@ -46,7 +46,7 @@ export default function Stats() {
   }, []);
 
   return (
-    <section ref={ref} className="relative py-16 sm:py-20 bg-[#1C1C1E] overflow-hidden">
+    <section ref={ref} className="relative py-16 sm:py-20 bg-[#2A2A2E] overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {stats.map((stat) => (

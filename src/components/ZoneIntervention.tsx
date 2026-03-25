@@ -37,7 +37,7 @@ export default function ZoneIntervention() {
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#999] mb-4">
                 Zone d'intervention
               </p>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1C1C1E] leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#2A2A2E] leading-tight">
                 Bordeaux Métropole<br />
                 <span className="text-[#999]">& ses alentours</span>
               </h2>
@@ -52,7 +52,7 @@ export default function ZoneIntervention() {
                     key={z.name}
                     className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
                       z.highlight
-                        ? "bg-[#1C1C1E] text-white"
+                        ? "bg-[#2A2A2E] text-white"
                         : "bg-[#f5f5f5] text-[#555] hover:bg-[#eee]"
                     }`}
                   >
@@ -92,7 +92,7 @@ export default function ZoneIntervention() {
               />
               {/* Overlay badge */}
               <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-lg border border-[#eee]">
-                <p className="text-xs font-bold text-[#1C1C1E]">OC CLIM</p>
+                <p className="text-xs font-bold text-[#2A2A2E]">OC CLIM</p>
                 <p className="text-[10px] text-[#999]">Bordeaux Métropole · Rayon 40 km</p>
               </div>
             </div>

@@ -34,7 +34,7 @@ export default function Intervention() {
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#999] mb-4">
               Notre champ d'intervention
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1C1C1E]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#2A2A2E]">
               De la conception à la maintenance
             </h2>
           </div>
@@ -58,16 +58,16 @@ export default function Intervention() {
                     <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors" />
                     {/* Step number */}
                     <div className="absolute top-4 left-4 h-10 w-10 rounded-full bg-white flex items-center justify-center shadow-lg">
-                      <span className="text-sm font-extrabold text-[#1C1C1E]">0{i + 1}</span>
+                      <span className="text-sm font-extrabold text-[#2A2A2E]">0{i + 1}</span>
                     </div>
                   </div>
 
                   {/* Icon */}
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#1C1C1E] mb-4">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#2A2A2E] mb-4">
                     <Icon className="h-5 w-5 text-white" strokeWidth={2} />
                   </div>
 
-                  <h3 className="text-lg font-bold text-[#1C1C1E] mb-2">{step.title}</h3>
+                  <h3 className="text-lg font-bold text-[#2A2A2E] mb-2">{step.title}</h3>
                   <p className="text-sm text-[#777] leading-relaxed max-w-xs mx-auto">
                     {step.description}
                   </p>
@@ -81,7 +81,7 @@ export default function Intervention() {
           <div className="text-center mt-16">
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 bg-[#1C1C1E] text-white px-8 py-4 rounded-lg text-sm font-bold uppercase tracking-wide hover:bg-[#3C3C3E] transition-colors"
+              className="inline-flex items-center gap-2 bg-[#2A2A2E] text-white px-8 py-4 rounded-lg text-sm font-bold uppercase tracking-wide hover:bg-[#4A4A4E] transition-colors"
             >
               Découvrir l'entreprise
               <ArrowRight className="h-4 w-4" />
