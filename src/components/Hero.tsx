@@ -10,12 +10,14 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black" />
 
       {/* Logo noir et blanc immersif en fond — image telle quelle */}
-      <div className="absolute inset-0 flex items-center justify-center lg:justify-end lg:pr-[5%] pointer-events-none" style={{ perspective: "1200px" }}>
-        {/* Glow subtil */}
-        <div className="absolute w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] rounded-full bg-white/[0.04] blur-[100px] animate-logo-breathe" />
+      {/* Mobile: en haut à droite, petit, ne gêne pas le texte */}
+      {/* Desktop: à droite, grand, centré verticalement */}
+      <div className="absolute inset-0 pointer-events-none" style={{ perspective: "1200px" }}>
+        {/* Glow subtil — desktop only */}
+        <div className="hidden lg:block absolute top-1/2 right-[15%] -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-white/[0.04] blur-[100px] animate-logo-breathe" />
 
-        {/* Logo tel quel — fond noir intégré, pas de filtre */}
-        <div className="relative w-[80vw] h-[80vw] sm:w-[55vw] sm:h-[55vw] lg:w-[45vw] lg:h-[45vw] xl:w-[40vw] xl:h-[40vw] max-w-[700px] max-h-[700px] animate-logo-3d" style={{ transformStyle: "preserve-3d" }}>
+        {/* Logo — mobile: haut-droite petit / desktop: droite grand */}
+        <div className="absolute top-20 right-4 w-[45vw] h-[45vw] opacity-[0.15] sm:opacity-[0.2] sm:top-1/2 sm:right-[5%] sm:-translate-y-1/2 sm:w-[35vw] sm:h-[35vw] lg:opacity-100 lg:w-[45vw] lg:h-[45vw] xl:w-[40vw] xl:h-[40vw] max-w-[700px] max-h-[700px] animate-logo-3d" style={{ transformStyle: "preserve-3d" }}>
           <Image
             src="/images/logo-dark.png"
             alt=""
