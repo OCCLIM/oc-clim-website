@@ -1,4 +1,3 @@
-import IntroGate from "@/components/intro/IntroGate";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import BrandMarquee from "@/components/BrandMarquee";
@@ -16,7 +15,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <IntroGate>
+    <>
       <Header />
       <main>
         <Hero />
@@ -33,6 +32,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-    </IntroGate>
+    </>
   );
 }
