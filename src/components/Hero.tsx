@@ -9,20 +9,52 @@ export default function Hero() {
       {/* Background noir */}
       <div className="absolute inset-0 bg-[#080808]" />
 
-      {/* Logo en fond — immersif, pas en carré */}
-      <div className="absolute inset-0 flex items-center justify-center lg:justify-end lg:pr-[8%] pointer-events-none">
-        <div className="relative w-[70vw] h-[70vw] sm:w-[50vw] sm:h-[50vw] lg:w-[42vw] lg:h-[42vw] xl:w-[36vw] xl:h-[36vw] max-w-[600px] max-h-[600px] animate-logo-breathe">
-          {/* Halo lumineux */}
-          <div className="absolute inset-[-20%] rounded-full bg-white/[0.02] blur-[100px]" />
+      {/* Logo immersif 3D — visible, en perspective */}
+      <div className="absolute inset-0 flex items-center justify-center lg:justify-end lg:pr-[5%] pointer-events-none" style={{ perspective: "1200px" }}>
+        {/* Glow derrière le logo */}
+        <div className="absolute w-[500px] h-[500px] lg:w-[700px] lg:h-[700px] rounded-full bg-white/[0.03] blur-[120px] animate-logo-breathe lg:right-[5%]" />
+
+        {/* Logo 3D */}
+        <div
+          className="relative w-[55vw] h-[55vw] sm:w-[45vw] sm:h-[45vw] lg:w-[38vw] lg:h-[38vw] xl:w-[32vw] xl:h-[32vw] max-w-[550px] max-h-[550px] animate-logo-3d"
+          style={{ transformStyle: "preserve-3d" }}
+        >
+          {/* Reflet arrière — couche de profondeur */}
+          <div className="absolute inset-0 animate-logo-shadow" style={{ transform: "translateZ(-60px) scale(1.05)" }}>
+            <Image
+              src="/images/logo.png"
+              alt=""
+              width={800}
+              height={800}
+              className="w-full h-full object-contain opacity-[0.08] blur-[3px] select-none"
+              priority
+              aria-hidden="true"
+            />
+          </div>
+
+          {/* Logo principal — bien visible */}
           <Image
             src="/images/logo.png"
             alt=""
             width={800}
             height={800}
-            className="w-full h-full object-contain opacity-[0.04] lg:opacity-[0.06] select-none"
+            className="w-full h-full object-contain opacity-[0.18] lg:opacity-[0.22] select-none drop-shadow-[0_0_80px_rgba(255,255,255,0.06)]"
             priority
             aria-hidden="true"
+            style={{ transform: "translateZ(0px)" }}
           />
+
+          {/* Reflet avant — highlight */}
+          <div className="absolute inset-[15%] animate-logo-shine" style={{ transform: "translateZ(30px)" }}>
+            <Image
+              src="/images/logo.png"
+              alt=""
+              width={800}
+              height={800}
+              className="w-full h-full object-contain opacity-[0.06] select-none"
+              aria-hidden="true"
+            />
+          </div>
         </div>
       </div>
 
