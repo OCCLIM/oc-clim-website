@@ -11,17 +11,17 @@ export default function Hero() {
 
       {/* Logo blanc immersif en fond 3D */}
       <div className="absolute inset-0 flex items-center justify-center lg:justify-end lg:pr-[8%] pointer-events-none" style={{ perspective: "1000px" }}>
-        {/* Glow */}
-        <div className="absolute w-[60vw] h-[60vw] max-w-[700px] max-h-[700px] rounded-full bg-white/[0.025] blur-[150px] animate-logo-breathe" />
+        {/* Glow derrière le logo */}
+        <div className="absolute w-[60vw] h-[60vw] max-w-[700px] max-h-[700px] rounded-full bg-white/[0.03] blur-[120px] animate-logo-breathe" />
 
-        {/* Logo inversé (noir→blanc) — opacité sur le container pour garder le blanc pur */}
-        <div className="relative w-[65vw] h-[65vw] sm:w-[50vw] sm:h-[50vw] lg:w-[40vw] lg:h-[40vw] xl:w-[35vw] xl:h-[35vw] max-w-[600px] max-h-[600px] opacity-[0.15] lg:opacity-[0.22] animate-logo-3d" style={{ transformStyle: "preserve-3d" }}>
+        {/* Logo BLANC sur transparent — aucun filtre CSS */}
+        <div className="relative w-[65vw] h-[65vw] sm:w-[50vw] sm:h-[50vw] lg:w-[40vw] lg:h-[40vw] xl:w-[35vw] xl:h-[35vw] max-w-[600px] max-h-[600px] opacity-20 lg:opacity-25 animate-logo-3d" style={{ transformStyle: "preserve-3d" }}>
           <Image
-            src="/images/logo.png"
+            src="/images/logo-white.png"
             alt=""
             width={800}
             height={800}
-            className="w-full h-full object-contain invert brightness-200 select-none drop-shadow-[0_0_100px_rgba(255,255,255,0.1)]"
+            className="w-full h-full object-contain select-none drop-shadow-[0_0_80px_rgba(255,255,255,0.15)]"
             priority
             aria-hidden="true"
           />
