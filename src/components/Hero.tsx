@@ -17,7 +17,7 @@ export default function Hero() {
         <div className="hidden lg:block absolute top-1/2 right-[15%] -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-white/[0.04] blur-[100px] animate-logo-breathe" />
 
         {/* Logo mobile: même image noir et blanc, en haut à droite */}
-        <div className="lg:hidden absolute top-20 right-2 w-[45vw] h-[45vw] opacity-40 animate-logo-3d" style={{ transformStyle: "preserve-3d" }}>
+        <div className="lg:hidden absolute top-20 right-2 w-[45vw] h-[45vw] animate-logo-3d" style={{ transformStyle: "preserve-3d" }}>
           <Image
             src="/images/logo-dark.png"
             alt=""
