@@ -5,79 +5,78 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-end overflow-hidden">
+    <section className="relative min-h-[100svh] flex items-end overflow-hidden">
       {/* Background noir */}
       <div className="absolute inset-0 bg-[#080808]" />
 
       {/* Contenu */}
       <div className="relative z-10 w-full">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-24 lg:pb-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 pb-20 sm:pb-24 lg:pb-32">
           <div className="flex items-end justify-between gap-12">
             {/* Left — texte */}
             <div className="max-w-3xl">
-              {/* Badge */}
-              <div className="mb-8 animate-fade-in">
-                <span className="inline-flex items-center gap-2.5 border border-white/10 bg-white/[0.04] px-5 py-2 text-[13px] font-medium text-white/70 tracking-wide">
+              {/* Badge - plus compact mobile */}
+              <div className="mb-5 sm:mb-8 animate-fade-in">
+                <span className="inline-flex items-center gap-2 border border-white/10 bg-white/[0.04] px-3.5 py-1.5 sm:px-5 sm:py-2 text-[11px] sm:text-[13px] font-medium text-white/70 tracking-wide">
                   <span className="h-1.5 w-1.5 rounded-full bg-white/40" />
-                  Climatisation & Pompes à chaleur · Bordeaux Métropole
+                  <span className="hidden sm:inline">Climatisation & Pompes à chaleur · Bordeaux Métropole</span>
+                  <span className="sm:hidden">Clim & PAC · Bordeaux</span>
                 </span>
               </div>
 
-              {/* Titre */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[5.5rem] font-extrabold leading-[1.05] tracking-tight text-white animate-fade-in-up">
+              {/* Titre - taille ajustée mobile */}
+              <h1 className="text-[2rem] leading-[1.1] sm:text-5xl lg:text-6xl xl:text-[5.5rem] font-extrabold sm:leading-[1.05] tracking-tight text-white animate-fade-in-up">
                 Votre confort,
                 <br />
                 notre priorité.
               </h1>
 
-              {/* Sous-titre */}
-              <p className="mt-7 max-w-xl text-base sm:text-lg text-white/50 leading-relaxed animate-fade-in-up delay-200">
-                Installation, entretien et dépannage de systèmes climatiques.
-                Un seul interlocuteur, du devis à la mise en service.
+              {/* Sous-titre - plus court mobile */}
+              <p className="mt-4 sm:mt-7 max-w-xl text-[15px] sm:text-lg text-white/50 leading-relaxed animate-fade-in-up delay-200">
+                <span className="hidden sm:inline">Installation, entretien et dépannage de systèmes climatiques. Un seul interlocuteur, du devis à la mise en service.</span>
+                <span className="sm:hidden">Installation, entretien et dépannage de climatisation. Du devis à la mise en service.</span>
               </p>
 
-              {/* Stats inline */}
-              <div className="mt-10 flex items-center gap-8 animate-fade-in-up delay-300">
+              {/* Stats inline - grille mobile */}
+              <div className="mt-6 sm:mt-10 flex items-center gap-5 sm:gap-8 animate-fade-in-up delay-300">
                 <div>
-                  <p className="text-2xl sm:text-3xl font-black text-white">150<span className="text-white/30">+</span></p>
-                  <p className="text-[11px] uppercase tracking-wider text-white/30 font-medium mt-0.5">Interventions</p>
+                  <p className="text-xl sm:text-3xl font-black text-white">150<span className="text-white/30">+</span></p>
+                  <p className="text-[10px] sm:text-[11px] uppercase tracking-wider text-white/30 font-medium mt-0.5">Interventions</p>
                 </div>
-                <div className="h-10 w-px bg-white/10" />
+                <div className="h-8 sm:h-10 w-px bg-white/10" />
                 <div>
-                  <p className="text-2xl sm:text-3xl font-black text-white">5<span className="text-white/30">/5</span></p>
-                  <p className="text-[11px] uppercase tracking-wider text-white/30 font-medium mt-0.5">AlloVoisins</p>
+                  <p className="text-xl sm:text-3xl font-black text-white">5<span className="text-white/30">/5</span></p>
+                  <p className="text-[10px] sm:text-[11px] uppercase tracking-wider text-white/30 font-medium mt-0.5">AlloVoisins</p>
                 </div>
-                <div className="h-10 w-px bg-white/10" />
+                <div className="h-8 sm:h-10 w-px bg-white/10" />
                 <div>
-                  <p className="text-2xl sm:text-3xl font-black text-white">7<span className="text-white/30">j/7</span></p>
-                  <p className="text-[11px] uppercase tracking-wider text-white/30 font-medium mt-0.5">Disponible</p>
+                  <p className="text-xl sm:text-3xl font-black text-white">7<span className="text-white/30">j/7</span></p>
+                  <p className="text-[10px] sm:text-[11px] uppercase tracking-wider text-white/30 font-medium mt-0.5">Disponible</p>
                 </div>
               </div>
 
-              {/* CTAs */}
-              <div className="mt-10 flex flex-wrap items-center gap-4 animate-fade-in-up delay-400">
+              {/* CTAs - stack vertical mobile */}
+              <div className="mt-6 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 animate-fade-in-up delay-400">
                 <a
                   href="tel:0767117530"
-                  className="inline-flex items-center gap-2.5 bg-white text-[#111] px-7 py-4 rounded-xl text-sm font-bold tracking-wide uppercase hover:bg-white/90 transition-all"
+                  className="inline-flex items-center justify-center gap-2.5 bg-white text-[#111] px-6 py-3.5 sm:px-7 sm:py-4 rounded-xl text-sm font-bold tracking-wide uppercase hover:bg-white/90 transition-all"
                 >
                   <Phone className="h-4 w-4" />
                   07 67 11 75 30
                 </a>
                 <a
                   href="#contact"
-                  className="inline-flex items-center gap-2.5 border border-white/20 text-white px-7 py-4 rounded-xl text-sm font-bold tracking-wide uppercase hover:bg-white/5 hover:border-white/40 transition-all"
+                  className="inline-flex items-center justify-center gap-2.5 border border-white/20 text-white px-6 py-3.5 sm:px-7 sm:py-4 rounded-xl text-sm font-bold tracking-wide uppercase hover:bg-white/5 hover:border-white/40 transition-all"
                 >
                   Estimation gratuite
                 </a>
               </div>
             </div>
 
-            {/* Right — Logo vivant */}
+            {/* Right — Logo vivant (desktop only) */}
             <div className="hidden lg:block shrink-0 animate-fade-in delay-300">
               <div className="relative">
-                {/* Halo lumineux derrière */}
                 <div className="absolute inset-0 rounded-3xl bg-white/[0.03] blur-3xl animate-logo-breathe" />
-                {/* Cadre logo */}
                 <div className="relative h-[340px] w-[340px] xl:h-[400px] xl:w-[400px] rounded-3xl bg-white flex items-center justify-center p-14 animate-logo-float">
                   <Image
                     src="/images/logo.png"
@@ -93,8 +92,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in delay-500">
+        {/* Scroll indicator - caché mobile */}
+        <div className="hidden sm:block absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in delay-500">
           <a href="#services" className="flex flex-col items-center gap-2 text-white/30 hover:text-white/60 transition-colors">
             <span className="text-[10px] uppercase tracking-[0.25em] font-medium">Découvrir</span>
             <ArrowDown className="h-4 w-4 animate-float" />
