@@ -9,19 +9,19 @@ export default function Hero() {
       {/* Background noir */}
       <div className="absolute inset-0 bg-[#080808]" />
 
-      {/* Logo blanc immersif en fond 3D */}
-      <div className="absolute inset-0 flex items-center justify-center lg:justify-end lg:pr-[8%] pointer-events-none" style={{ perspective: "1000px" }}>
-        {/* Glow derrière le logo */}
-        <div className="absolute w-[60vw] h-[60vw] max-w-[700px] max-h-[700px] rounded-full bg-white/[0.03] blur-[120px] animate-logo-breathe" />
+      {/* Logo noir et blanc immersif en fond — image telle quelle */}
+      <div className="absolute inset-0 flex items-center justify-center lg:justify-end lg:pr-[5%] pointer-events-none" style={{ perspective: "1200px" }}>
+        {/* Glow subtil */}
+        <div className="absolute w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] rounded-full bg-white/[0.04] blur-[100px] animate-logo-breathe" />
 
-        {/* Logo BLANC sur transparent — aucun filtre CSS */}
-        <div className="relative w-[65vw] h-[65vw] sm:w-[50vw] sm:h-[50vw] lg:w-[40vw] lg:h-[40vw] xl:w-[35vw] xl:h-[35vw] max-w-[600px] max-h-[600px] opacity-20 lg:opacity-25 animate-logo-3d" style={{ transformStyle: "preserve-3d" }}>
+        {/* Logo tel quel — fond noir intégré, pas de filtre */}
+        <div className="relative w-[80vw] h-[80vw] sm:w-[55vw] sm:h-[55vw] lg:w-[45vw] lg:h-[45vw] xl:w-[40vw] xl:h-[40vw] max-w-[700px] max-h-[700px] animate-logo-3d" style={{ transformStyle: "preserve-3d" }}>
           <Image
-            src="/images/logo-white.png"
+            src="/images/logo-dark.png"
             alt=""
-            width={800}
-            height={800}
-            className="w-full h-full object-contain select-none drop-shadow-[0_0_80px_rgba(255,255,255,0.15)]"
+            width={1024}
+            height={1024}
+            className="w-full h-full object-contain select-none rounded-3xl"
             priority
             aria-hidden="true"
           />
