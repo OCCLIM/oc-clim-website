@@ -6,8 +6,8 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative min-h-[100svh] flex items-end overflow-hidden">
-      {/* Background noir */}
-      <div className="absolute inset-0 bg-[#080808]" />
+      {/* Background noir pur — identique au fond du logo */}
+      <div className="absolute inset-0 bg-black" />
 
       {/* Logo noir et blanc immersif en fond — image telle quelle */}
       <div className="absolute inset-0 flex items-center justify-center lg:justify-end lg:pr-[5%] pointer-events-none" style={{ perspective: "1200px" }}>
