@@ -16,14 +16,14 @@ export default function Hero() {
         {/* Glow subtil — desktop only */}
         <div className="hidden lg:block absolute top-1/2 right-[15%] -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-white/[0.04] blur-[100px] animate-logo-breathe" />
 
-        {/* Logo mobile: blanc sur transparent, bien visible */}
-        <div className="lg:hidden absolute top-24 right-4 w-[40vw] h-[40vw] opacity-30 animate-logo-3d" style={{ transformStyle: "preserve-3d" }}>
+        {/* Logo mobile: même image noir et blanc, en haut à droite */}
+        <div className="lg:hidden absolute top-20 right-2 w-[45vw] h-[45vw] opacity-40 animate-logo-3d" style={{ transformStyle: "preserve-3d" }}>
           <Image
-            src="/images/logo-white.png"
+            src="/images/logo-dark.png"
             alt=""
             width={1024}
             height={1024}
-            className="w-full h-full object-contain select-none"
+            className="w-full h-full object-contain select-none rounded-2xl"
             priority
             aria-hidden="true"
           />
