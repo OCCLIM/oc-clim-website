@@ -9,6 +9,23 @@ export default function Hero() {
       {/* Background noir */}
       <div className="absolute inset-0 bg-[#080808]" />
 
+      {/* Logo en fond — immersif, pas en carré */}
+      <div className="absolute inset-0 flex items-center justify-center lg:justify-end lg:pr-[8%] pointer-events-none">
+        <div className="relative w-[70vw] h-[70vw] sm:w-[50vw] sm:h-[50vw] lg:w-[42vw] lg:h-[42vw] xl:w-[36vw] xl:h-[36vw] max-w-[600px] max-h-[600px] animate-logo-breathe">
+          {/* Halo lumineux */}
+          <div className="absolute inset-[-20%] rounded-full bg-white/[0.02] blur-[100px]" />
+          <Image
+            src="/images/logo.png"
+            alt=""
+            width={800}
+            height={800}
+            className="w-full h-full object-contain opacity-[0.04] lg:opacity-[0.06] select-none"
+            priority
+            aria-hidden="true"
+          />
+        </div>
+      </div>
+
       {/* Contenu */}
       <div className="relative z-10 w-full">
         <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8 pb-20 sm:pb-24 lg:pb-32">
@@ -73,22 +90,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Right — Logo vivant (desktop only) */}
-            <div className="hidden lg:block shrink-0 animate-fade-in delay-300">
-              <div className="relative">
-                <div className="absolute inset-0 rounded-3xl bg-white/[0.03] blur-3xl animate-logo-breathe" />
-                <div className="relative h-[340px] w-[340px] xl:h-[400px] xl:w-[400px] rounded-3xl bg-white flex items-center justify-center p-14 animate-logo-float">
-                  <Image
-                    src="/images/logo.png"
-                    alt="OC CLIM"
-                    width={400}
-                    height={400}
-                    className="w-full h-full object-contain"
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
+            {/* Logo maintenant en fond — plus de bloc carré */}
           </div>
         </div>
 
