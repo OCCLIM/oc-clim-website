@@ -87,6 +87,13 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); }
   .animate-marquee-fast { animation: marquee 14s linear infinite; }
 }
 
+/* Intro particles */
+@keyframes introParticle {
+  0% { opacity: 0; transform: translateY(0) translateX(0); }
+  15% { opacity: 0.6; }
+  100% { opacity: 0; transform: translateY(80px) translateX(30px); }
+}
+
 .animate-fade-in-up { animation: fade-in-up 0.8s ease-out both; }
 .animate-fade-in { animation: fade-in 0.6s ease-out both; }
 .animate-slide-left { animation: slide-in-left 0.8s ease-out both; }

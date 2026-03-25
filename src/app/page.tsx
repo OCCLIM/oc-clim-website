@@ -1,9 +1,9 @@
+import IntroGate from "@/components/intro/IntroGate";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import BrandMarquee from "@/components/BrandMarquee";
 import Stats from "@/components/Stats";
 import Services from "@/components/Services";
-
 import Mission from "@/components/Mission";
 import Intervention from "@/components/Intervention";
 import Realisations from "@/components/Realisations";
@@ -16,14 +16,13 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <>
+    <IntroGate>
       <Header />
       <main>
         <Hero />
         <BrandMarquee />
         <Stats />
         <Services />
-
         <Mission />
         <Intervention />
         <Realisations />
@@ -34,6 +33,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </IntroGate>
   );
 }
