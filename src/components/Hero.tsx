@@ -14,14 +14,14 @@ export default function Hero() {
         {/* Glow */}
         <div className="absolute w-[60vw] h-[60vw] max-w-[700px] max-h-[700px] rounded-full bg-white/[0.025] blur-[150px] animate-logo-breathe" />
 
-        {/* Logo inversé (noir→blanc via CSS invert) + rotation 3D lente */}
-        <div className="relative w-[65vw] h-[65vw] sm:w-[50vw] sm:h-[50vw] lg:w-[40vw] lg:h-[40vw] xl:w-[35vw] xl:h-[35vw] max-w-[600px] max-h-[600px] animate-logo-3d" style={{ transformStyle: "preserve-3d" }}>
+        {/* Logo inversé (noir→blanc) — opacité sur le container pour garder le blanc pur */}
+        <div className="relative w-[65vw] h-[65vw] sm:w-[50vw] sm:h-[50vw] lg:w-[40vw] lg:h-[40vw] xl:w-[35vw] xl:h-[35vw] max-w-[600px] max-h-[600px] opacity-[0.15] lg:opacity-[0.22] animate-logo-3d" style={{ transformStyle: "preserve-3d" }}>
           <Image
             src="/images/logo.png"
             alt=""
             width={800}
             height={800}
-            className="w-full h-full object-contain invert opacity-[0.15] lg:opacity-[0.20] select-none drop-shadow-[0_0_100px_rgba(255,255,255,0.08)]"
+            className="w-full h-full object-contain invert brightness-200 select-none drop-shadow-[0_0_100px_rgba(255,255,255,0.1)]"
             priority
             aria-hidden="true"
           />
