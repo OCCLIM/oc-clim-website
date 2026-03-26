@@ -138,7 +138,7 @@ export default function Hero() {
           style={{ transformStyle: "preserve-3d" }}
         >
           <Image
-            src="/images/logo-nb.png"
+            src="/images/logo-hero.png"
             alt=""
             width={1024}
             height={1024}
@@ -154,7 +154,7 @@ export default function Hero() {
           style={{ transformStyle: "preserve-3d" }}
         >
           <Image
-            src="/images/logo-nb.png"
+            src="/images/logo-hero.png"
             alt=""
             width={1024}
             height={1024}
