@@ -34,7 +34,7 @@ const reasons = [
   {
     icon: Heart,
     title: "Satisfaction",
-    description: "Noté 5/5 sur AlloVoisins. Nos clients nous recommandent parce que nous faisons les choses bien.",
+    description: "Noté 5/5 par nos clients. Ils nous recommandent parce que nous faisons les choses bien.",
     accent: "5/5",
   },
 ];

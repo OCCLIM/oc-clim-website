@@ -48,7 +48,7 @@ export default function Testimonials() {
                   <Star key={i} className="h-4 w-4 text-amber-400 fill-amber-400" />
                 ))}
               </div>
-              <span className="text-sm text-white/40">5/5 sur AlloVoisins · Avis vérifiés</span>
+              <span className="text-sm text-white/40">5/5 · Avis vérifiés</span>
             </div>
           </div>
         </ScrollReveal>
@@ -75,19 +75,6 @@ export default function Testimonials() {
           ))}
         </div>
 
-        <ScrollReveal delay={500}>
-          <div className="text-center mt-10">
-            <a
-              href="https://www.allovoisins.com/p/occlim"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-white/30 hover:text-white/60 transition-colors"
-            >
-              <Star className="h-3.5 w-3.5 text-amber-400 fill-amber-400" />
-              Voir tous les avis sur AlloVoisins
-            </a>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   );

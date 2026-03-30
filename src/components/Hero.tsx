@@ -208,7 +208,7 @@ export default function Hero() {
                 <div className="h-10 sm:h-12 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent" />
                 <div>
                   <p className="text-2xl sm:text-3xl font-black text-white">5<span className="text-white/30">/5</span></p>
-                  <p className="text-[10px] sm:text-[11px] uppercase tracking-wider text-white/30 font-medium mt-0.5">AlloVoisins</p>
+                  <p className="text-[10px] sm:text-[11px] uppercase tracking-wider text-white/30 font-medium mt-0.5">Satisfaction</p>
                 </div>
                 <div className="h-10 sm:h-12 w-px bg-gradient-to-b from-transparent via-white/20 to-transparent" />
                 <div>
