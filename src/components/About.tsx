@@ -5,7 +5,7 @@ import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 
 const stats = [
-  { value: "110+", label: "Clients satisfaits", icon: Users },
+  { value: "150+", label: "Interventions réalisées", icon: Users },
   { value: "5/5", label: "Satisfaction clients", icon: Star },
   { value: "7j/7", label: "Disponibilité", icon: Clock },
 ];
