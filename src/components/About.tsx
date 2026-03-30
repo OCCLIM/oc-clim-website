@@ -20,7 +20,7 @@ export default function About() {
             <div className="relative">
               <div className="relative h-[500px] rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/projets/06-console-mitsubishi.jpg"
+                  src="/images/can-oruc.jpg"
                   alt="Can Oruc — OC CLIM"
                   fill
                   className="object-cover"
