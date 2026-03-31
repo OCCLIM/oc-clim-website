@@ -11,7 +11,7 @@ const brands = [
     specialty: "Pompes à chaleur, climatisation réversible",
     description: "Leader mondial de la climatisation depuis 1924. Présent dans plus de 150 pays, Daikin est la référence en matière de pompes à chaleur et systèmes réversibles ultra-performants avec un engagement fort pour l'environnement.",
     color: "#004C97",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Daikin_logo.svg/320px-Daikin_logo.svg.png",
+    logo: "/images/logo clim/daikin-logo-1600x1600.jpeg",
   },
   {
     name: "MITSUBISHI",
@@ -20,7 +20,7 @@ const brands = [
     specialty: "Technologie Inverter, systèmes gainables",
     description: "Géant japonais de l'électronique et du génie climatique. Ses systèmes sont parmi les plus silencieux et économes au monde. La technologie Inverter de Mitsubishi a révolutionné le secteur.",
     color: "#E60012",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Mitsubishi_Electric_logo.svg/320px-Mitsubishi_Electric_logo.svg.png",
+    logo: "/images/logo clim/medium1576.png",
   },
   {
     name: "ATLANTIC",
@@ -29,7 +29,7 @@ const brands = [
     specialty: "Chauffage, eau chaude, climatisation",
     description: "Groupe français et spécialiste hexagonal du confort thermique. Avec plus de 12 000 collaborateurs, Atlantic conçoit des solutions de chauffage, climatisation et production d'eau chaude. Savoir-faire 100 % français.",
     color: "#005BAA",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/fr/thumb/0/09/Logo_Atlantic_2020.svg/320px-Logo_Atlantic_2020.svg.png",
+    logo: "/images/logo clim/clim-atlantic.jpeg",
   },
   {
     name: "HEIWA",
@@ -37,8 +37,8 @@ const brands = [
     founded: "France",
     specialty: "Pompes à chaleur air/eau haute performance",
     description: "Marque française spécialisée dans les pompes à chaleur, combinant technologie japonaise et expertise européenne. COP parmi les plus élevés du marché, avec un SAV réactif.",
-    color: "#1A1A1A",
-    logoUrl: "",
+    color: "#1A9E8F",
+    logo: "/images/logo clim/LogoHeiwapngpng_6809eee6b52125.71398949.png",
   },
   {
     name: "ARISTON",
@@ -47,7 +47,7 @@ const brands = [
     specialty: "Chauffe-eaux thermodynamiques, chauffage",
     description: "Leader européen du chauffage et de la production d'eau chaude depuis 1930. Présent dans 40 pays, Ariston est reconnu pour ses chauffe-eaux thermodynamiques innovants.",
     color: "#E31E24",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Ariston_Thermo_logo.svg/320px-Ariston_Thermo_logo.svg.png",
+    logo: "/images/logo clim/LOGO_ARISTON_18e44b81d2.png",
   },
   {
     name: "TOSHIBA",
@@ -56,7 +56,7 @@ const brands = [
     specialty: "Compresseur Inverter, systèmes VRF",
     description: "Pionnier technologique depuis 1875 et inventeur du premier compresseur Inverter en 1981. Toshiba propose des systèmes ultra-performants avec des rendements exceptionnels.",
     color: "#FF0000",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Toshiba_logo.svg/320px-Toshiba_logo.svg.png",
+    logo: "/images/logo clim/images-2.png",
   },
   {
     name: "PANASONIC",
@@ -65,7 +65,7 @@ const brands = [
     specialty: "Purification nanoe™ X, PAC haute efficacité",
     description: "Multinationale japonaise fondée en 1918, acteur majeur du confort climatique. Ses systèmes intègrent la technologie nanoe™ X alliant innovation, durabilité et performance.",
     color: "#0068B7",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Panasonic_logo_%28Blue%29.svg/320px-Panasonic_logo_%28Blue%29.svg.png",
+    logo: "/images/logo clim/FR Panasonic CMYK.jpg",
   },
   {
     name: "FUJITSU",
@@ -74,27 +74,19 @@ const brands = [
     specialty: "Fiabilité, compresseurs silencieux",
     description: "Acteur japonais de référence depuis 1936, spécialisé dans la climatisation résidentielle et commerciale. Reconnu pour la fiabilité de ses compresseurs et leur faible niveau sonore.",
     color: "#E4002B",
-    logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Fujitsu-Logo.svg/320px-Fujitsu-Logo.svg.png",
+    logo: "/images/logo clim/Fujitsu-Logo.svg.png",
   },
 ];
 
 function BrandLogo({ brand }: { brand: typeof brands[0] }) {
-  if (brand.logoUrl) {
-    return (
-      // eslint-disable-next-line @next/next/no-img-element
-      <img
-        src={brand.logoUrl}
-        alt={brand.name}
-        className="h-6 sm:h-7 w-auto object-contain opacity-40 group-hover:opacity-90 transition-opacity duration-300 grayscale group-hover:grayscale-0"
-        loading="lazy"
-      />
-    );
-  }
-  // Fallback to text for brands without logo URL
   return (
-    <span className="text-sm font-bold tracking-[0.15em] text-[#ccc] group-hover:text-[#333338] transition-colors duration-300">
-      {brand.name}
-    </span>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={brand.logo}
+      alt={brand.name}
+      className="h-7 sm:h-9 w-auto max-w-[120px] sm:max-w-[140px] object-contain opacity-40 group-hover:opacity-90 transition-opacity duration-300 grayscale group-hover:grayscale-0"
+      loading="lazy"
+    />
   );
 }
 
@@ -142,23 +134,14 @@ export default function BrandMarquee() {
                 <X className="h-4 w-4 text-[#333]" />
               </button>
 
-              {/* Brand logo or name */}
+              {/* Brand logo */}
               <div className="mb-3">
-                {selected.logoUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={selected.logoUrl}
-                    alt={selected.name}
-                    className="h-8 w-auto object-contain"
-                  />
-                ) : (
-                  <div
-                    className="inline-block text-3xl font-black tracking-wider"
-                    style={{ color: selected.color }}
-                  >
-                    {selected.name}
-                  </div>
-                )}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={selected.logo}
+                  alt={selected.name}
+                  className="h-10 w-auto object-contain"
+                />
               </div>
               <p className="text-sm font-medium text-[#555]">{selected.fullName}</p>
             </div>
