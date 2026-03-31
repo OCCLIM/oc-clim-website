@@ -102,22 +102,24 @@ export default function BrandMarquee() {
               <button
                 key={`${brand.name}-${i}`}
                 onClick={() => setSelected(brand)}
-                className="group flex-shrink-0 mx-8 sm:mx-14 flex items-center gap-4 sm:gap-5 cursor-pointer select-none"
+                className="group flex-shrink-0 mx-4 sm:mx-6 cursor-pointer select-none"
               >
-                {/* Logo */}
-                <div className="relative h-14 w-14 sm:h-16 sm:w-16 rounded-xl bg-[#f8f8f8] border border-[#eee] flex items-center justify-center overflow-hidden p-2.5 sm:p-3 group-hover:border-[#ccc] group-hover:shadow-md transition-all duration-300">
-                  <Image
-                    src={brand.logo}
-                    alt={brand.name}
-                    width={64}
-                    height={64}
-                    className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                  />
+                <div className="w-[140px] sm:w-[170px] h-[90px] sm:h-[100px] rounded-xl bg-[#f9f9f9] border border-[#eee] flex flex-col items-center justify-center gap-2 px-4 py-3 group-hover:border-[#ccc] group-hover:shadow-lg group-hover:bg-white transition-all duration-300">
+                  {/* Logo — fills the space */}
+                  <div className="flex-1 w-full flex items-center justify-center">
+                    <Image
+                      src={brand.logo}
+                      alt={brand.name}
+                      width={120}
+                      height={60}
+                      className="max-h-[45px] sm:max-h-[50px] w-auto max-w-full object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                    />
+                  </div>
+                  {/* Name */}
+                  <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.1em] text-[#bbb] group-hover:text-[#333338] transition-colors duration-300 whitespace-nowrap">
+                    {brand.name}
+                  </span>
                 </div>
-                {/* Name */}
-                <span className="text-sm sm:text-base font-bold tracking-wide text-[#bbb] group-hover:text-[#333338] transition-colors duration-300 whitespace-nowrap">
-                  {brand.name}
-                </span>
               </button>
             ))}
           </div>
