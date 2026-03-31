@@ -85,16 +85,16 @@ export default function BrandMarquee() {
 
   return (
     <>
-      <section className="py-6 sm:py-8 bg-white border-y border-[#eee] overflow-hidden">
+      <section className="py-10 sm:py-14 bg-white border-y border-[#eee] overflow-hidden">
         {/* Label */}
-        <p className="text-center text-[10px] font-bold uppercase tracking-[0.25em] text-[#bbb] mb-5">
+        <p className="text-center text-[11px] sm:text-xs font-bold uppercase tracking-[0.25em] text-[#bbb] mb-8 sm:mb-10">
           Nos marques partenaires
         </p>
 
         <div className="relative">
           {/* Fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-white to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-white to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-white to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-white to-transparent z-10" />
 
           {/* Marquee track */}
           <div className="flex items-center animate-marquee-fast hover:[animation-play-state:paused]">
@@ -102,20 +102,20 @@ export default function BrandMarquee() {
               <button
                 key={`${brand.name}-${i}`}
                 onClick={() => setSelected(brand)}
-                className="group flex-shrink-0 mx-6 sm:mx-10 flex items-center gap-3 cursor-pointer select-none"
+                className="group flex-shrink-0 mx-8 sm:mx-14 flex items-center gap-4 sm:gap-5 cursor-pointer select-none"
               >
                 {/* Logo */}
-                <div className="relative h-8 w-8 sm:h-10 sm:w-10 rounded-lg bg-[#f8f8f8] border border-[#eee] flex items-center justify-center overflow-hidden p-1.5 group-hover:border-[#ddd] group-hover:shadow-sm transition-all duration-300">
+                <div className="relative h-14 w-14 sm:h-16 sm:w-16 rounded-xl bg-[#f8f8f8] border border-[#eee] flex items-center justify-center overflow-hidden p-2.5 sm:p-3 group-hover:border-[#ccc] group-hover:shadow-md transition-all duration-300">
                   <Image
                     src={brand.logo}
                     alt={brand.name}
-                    width={40}
-                    height={40}
+                    width={64}
+                    height={64}
                     className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                   />
                 </div>
                 {/* Name */}
-                <span className="text-xs sm:text-sm font-semibold tracking-wide text-[#bbb] group-hover:text-[#333338] transition-colors duration-300 whitespace-nowrap">
+                <span className="text-sm sm:text-base font-bold tracking-wide text-[#bbb] group-hover:text-[#333338] transition-colors duration-300 whitespace-nowrap">
                   {brand.name}
                 </span>
               </button>
