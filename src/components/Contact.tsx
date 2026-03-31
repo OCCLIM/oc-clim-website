@@ -19,6 +19,7 @@ export default function Contact() {
   const [form, setForm] = useState({
     nom: "", telephone: "", email: "", service: "", message: "",
   });
+  const [rgpd, setRgpd] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -147,6 +148,23 @@ export default function Contact() {
                   <div>
                     <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-[#999] mb-2">Message</label>
                     <textarea id="message" name="message" rows={4} required value={form.message} onChange={handleChange} placeholder="Décrivez votre projet..." className={`${inputClass} resize-none`} />
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <input
+                      id="rgpd"
+                      type="checkbox"
+                      checked={rgpd}
+                      onChange={(e) => setRgpd(e.target.checked)}
+                      required
+                      className="mt-1 h-4 w-4 rounded border-[#E5E5E5] text-[#333338] focus:ring-[#333338]"
+                    />
+                    <label htmlFor="rgpd" className="text-xs text-[#999] leading-relaxed">
+                      J'accepte que mes données soient traitées conformément à la{" "}
+                      <a href="/confidentialite" className="underline hover:text-[#333338] transition-colors">
+                        politique de confidentialité
+                      </a>{" "}
+                      d'OC CLIM. *
+                    </label>
                   </div>
                   {error && (
                     <p className="text-red-500 text-sm text-center bg-red-50 rounded-lg py-3">{error}</p>

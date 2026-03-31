@@ -20,11 +20,9 @@ export default function Mission() {
             <Image src="/images/logo.png" alt="OC CLIM" width={40} height={40} className="h-10 w-10 object-contain" />
           </div>
           <blockquote className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-snug">
-            Offrir une prestation <span className="text-white/50">fiable</span> et{" "}
-            <span className="text-white/50">performante</span> répondant aux attentes
-            de nos clients en matière de{" "}
-            <span className="text-white/50">confort thermique</span> et d'
-            <span className="text-white/50">efficacité énergétique</span>.
+            Je fais ce métier parce que j'aime <span className="text-white/50">résoudre des problèmes</span> concrets.{" "}
+            Quand un client me dit qu'il dort enfin <span className="text-white/50">au frais</span> ou que sa famille a{" "}
+            <span className="text-white/50">chaud l'hiver</span> grâce à mon installation — c'est ça qui me motive.
           </blockquote>
           <div className="mt-8 flex items-center justify-center gap-3">
             <div className="h-px w-8 bg-white/20" />

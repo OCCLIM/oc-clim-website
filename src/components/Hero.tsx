@@ -184,13 +184,13 @@ export default function Hero() {
 
               {/* Titre */}
               <h1 className="text-[2rem] leading-[1.1] sm:text-5xl lg:text-6xl xl:text-[5.5rem] font-extrabold sm:leading-[1.05] tracking-tight text-white animate-fade-in-up">
-                Votre{" "}
+                Un seul{" "}
                 <span className="relative inline-block">
-                  confort,
+                  interlocuteur,
                   <span className="absolute -bottom-1 left-0 right-0 h-[3px] bg-gradient-to-r from-white/60 to-transparent rounded-full" />
                 </span>
                 <br />
-                notre priorité.
+                de A à Z.
               </h1>
 
               {/* Sous-titre */}
@@ -239,8 +239,7 @@ export default function Hero() {
 
         {/* Scroll indicator */}
         <div className="hidden sm:block absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in delay-500">
-          <a href="#services" className="flex flex-col items-center gap-2 text-white/30 hover:text-white/60 transition-colors">
-            <span className="text-[10px] uppercase tracking-[0.25em] font-medium">Découvrir</span>
+          <a href="#services" className="flex flex-col items-center gap-2 text-white/30 hover:text-white/60 transition-colors" aria-label="Défiler vers le bas">
             <div className="relative w-5 h-8 rounded-full border border-white/20 flex items-start justify-center p-1.5">
               <div className="w-1 h-1.5 rounded-full bg-white/60 animate-scroll-dot" />
             </div>

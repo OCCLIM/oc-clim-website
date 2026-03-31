@@ -80,7 +80,7 @@ export default function Intervention() {
         <ScrollReveal delay={500}>
           <div className="text-center mt-16">
             <a
-              href="#contact"
+              href="#a-propos"
               className="inline-flex items-center gap-2 bg-[#333338] text-white px-8 py-4 rounded-lg text-sm font-bold uppercase tracking-wide hover:bg-[#535358] transition-colors"
             >
               Découvrir l'entreprise

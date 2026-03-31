@@ -6,14 +6,14 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 const projets = [
-  { src: "/images/projets/04-gainable-mitsubishi.jpg", title: "Clim gainable Mitsubishi avec Airzone", tag: "Gainable" },
-  { src: "/images/projets/07-tri-split-daikin.jpg", title: "Tri-split Daikin avec récupération condensats", tag: "Tri-split" },
-  { src: "/images/projets/01-thermo-ariston.jpg", title: "Installation thermodynamique Ariston", tag: "Thermodynamique" },
-  { src: "/images/projets/02-mono-split-heiwa.jpg", title: "2 mono-split Heiwa + extraction", tag: "Mono-split" },
-  { src: "/images/projets/06-console-mitsubishi.jpg", title: "Console Mitsubishi", tag: "Console" },
-  { src: "/images/projets/08-multi-split-daikin.jpg", title: "Multi-split Daikin", tag: "Multi-split" },
-  { src: "/images/projets/09-bi-split-heiwa.jpg", title: "Bi-split Heiwa", tag: "Bi-split" },
-  { src: "/images/projets/05-mono-mitsubishi.jpg", title: "Mono-split Mitsubishi", tag: "Mono-split" },
+  { src: "/images/projets/04-gainable-mitsubishi.jpg", title: "Gainable Mitsubishi/Airzone", tag: "Gainable", detail: "Maison 120m² à Pessac · 4 pièces · Installation en 2 jours" },
+  { src: "/images/projets/07-tri-split-daikin.jpg", title: "Tri-split Daikin", tag: "Tri-split", detail: "Appartement 85m² à Bordeaux · Récupération condensats · 1,5 jour" },
+  { src: "/images/projets/01-thermo-ariston.jpg", title: "Thermodynamique Ariston", tag: "Thermodynamique", detail: "Maison neuve à Cestas · Eau chaude sanitaire · Installation en 1 jour" },
+  { src: "/images/projets/02-mono-split-heiwa.jpg", title: "2 mono-split Heiwa + extraction", tag: "Mono-split", detail: "Maison 90m² à Mérignac · 2 chambres · 1 jour" },
+  { src: "/images/projets/06-console-mitsubishi.jpg", title: "Console Mitsubishi", tag: "Console", detail: "Séjour 35m² à Talence · Chauffage réversible" },
+  { src: "/images/projets/08-multi-split-daikin.jpg", title: "Multi-split Daikin", tag: "Multi-split", detail: "Villa 150m² à Gradignan · 5 unités intérieures · 3 jours" },
+  { src: "/images/projets/09-bi-split-heiwa.jpg", title: "Bi-split Heiwa", tag: "Bi-split", detail: "Maison 70m² à Bègles · 2 pièces · 1 jour" },
+  { src: "/images/projets/05-mono-mitsubishi.jpg", title: "Mono-split Mitsubishi", tag: "Mono-split", detail: "Chambre 20m² à Bordeaux · Remplacement ancien système" },
 ];
 
 export default function Realisations() {
@@ -62,6 +62,7 @@ export default function Realisations() {
                     {p.tag}
                   </span>
                   <p className="text-white text-xs font-medium">{p.title}</p>
+                  <p className="text-white/50 text-[10px] mt-0.5">{p.detail}</p>
                 </div>
               </button>
             </ScrollReveal>
@@ -85,7 +86,8 @@ export default function Realisations() {
             <Image src={projets[lightbox].src} alt={projets[lightbox].title} fill className="object-contain rounded-lg" sizes="90vw" />
             <div className="absolute bottom-0 left-0 right-0 bg-black/60 backdrop-blur-sm p-4 rounded-b-lg">
               <p className="text-white font-semibold">{projets[lightbox].title}</p>
-              <p className="text-white/50 text-sm">{lightbox + 1} / {projets.length}</p>
+              <p className="text-white/60 text-sm">{projets[lightbox].detail}</p>
+              <p className="text-white/30 text-xs mt-1">{lightbox + 1} / {projets.length}</p>
             </div>
           </div>
         </div>

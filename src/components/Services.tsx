@@ -1,6 +1,6 @@
 "use client";
 
-import { Wind, Flame, Wrench, AlertTriangle, ArrowRight, Snowflake, AirVent, Droplets, RefreshCw, Settings, Zap } from "lucide-react";
+import { Wind, Flame, Wrench, ArrowRight, Droplets } from "lucide-react";
 import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 
@@ -10,29 +10,31 @@ const metiers = [
     title: "Climatisation",
     description: "Installation de systèmes mono-split, bi-split, multi-split et gainables pour un confort optimal été comme hiver.",
     image: "/images/projets/05-mono-mitsubishi.jpg",
+    href: "#faq",
+  },
+  {
+    icon: Droplets,
+    title: "Pompe à chaleur",
+    description: "PAC air/air réversible et PAC air/eau pour le chauffage et l'eau chaude sanitaire. Un investissement rentable dès la première année.",
+    image: "/images/projets/02-mono-split-heiwa.jpg",
+    href: "#faq",
   },
   {
     icon: Flame,
     title: "Chauffe-eau thermodynamique",
     description: "Production d'eau chaude sanitaire ultra économique. Jusqu'à 70 % d'économie sur votre facture grâce à l'énergie de l'air.",
     image: "/images/projets/01-thermo-ariston.jpg",
+    href: "#faq",
   },
   {
     icon: Wrench,
     title: "Maintenance & Dépannage",
     description: "Entretien régulier, contrats annuels et interventions rapides 7j/7. Toutes marques.",
     image: "/images/projets/10-maintenance-pac.jpg",
+    href: "#contact",
   },
 ];
 
-const solutions = [
-  { icon: Snowflake, title: "Split mural", desc: "Discret et performant" },
-  { icon: AirVent, title: "Gainable", desc: "Intégré au faux-plafond" },
-  { icon: Droplets, title: "PAC Air/Eau", desc: "Chauffage & eau chaude" },
-  { icon: RefreshCw, title: "PAC Air/Air", desc: "Réversible chaud/froid" },
-  { icon: Settings, title: "Entretien", desc: "Contrat annuel" },
-  { icon: Zap, title: "Dépannage", desc: "Intervention 7j/7" },
-];
 
 export default function Services() {
   return (
@@ -49,12 +51,12 @@ export default function Services() {
             </h2>
           </ScrollReveal>
 
-          <div className="mt-16 grid lg:grid-cols-3 gap-6">
+          <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {metiers.map((m, i) => {
               const Icon = m.icon;
               return (
                 <ScrollReveal key={m.title} delay={i * 150}>
-                  <a href="#contact" className="group block relative h-[420px] rounded-2xl overflow-hidden">
+                  <a href={m.href} className="group block relative h-[420px] rounded-2xl overflow-hidden">
                     <Image
                       src={m.image}
                       alt={m.title}
@@ -82,38 +84,6 @@ export default function Services() {
         </div>
       </div>
 
-      {/* Solutions grid - K2 style domaines d'activités */}
-      <div className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#999] mb-4">
-                Nos solutions
-              </p>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#333338]">
-                Explorez notre expertise
-              </h2>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
-            {solutions.map((s, i) => {
-              const Icon = s.icon;
-              return (
-                <ScrollReveal key={s.title} delay={i * 80}>
-                  <div className="group text-center p-6 rounded-2xl border border-[#E5E5E5] bg-white hover:border-[#333338]/15 hover:shadow-lg transition-all duration-300 cursor-pointer">
-                    <div className="mx-auto h-10 w-10 rounded-xl bg-[#F0F0F0] flex items-center justify-center mb-3 group-hover:bg-[#333338] transition-colors duration-300">
-                      <Icon className="h-5 w-5 text-[#333338] group-hover:text-white transition-colors duration-300" strokeWidth={1.8} />
-                    </div>
-                    <h3 className="text-sm font-bold text-[#333338] mb-1">{s.title}</h3>
-                    <p className="text-xs text-[#999]">{s.desc}</p>
-                  </div>
-                </ScrollReveal>
-              );
-            })}
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

@@ -89,9 +89,19 @@ export default function Footer() {
           <p className="text-xs text-white/20">
             © {new Date().getFullYear()} OC CLIM — Can Oruc. Tous droits réservés.
           </p>
-          <a href="#" className="flex items-center gap-1.5 text-xs text-white/20 hover:text-white/50 transition-colors">
-            Retour en haut <ArrowUp className="h-3 w-3" />
-          </a>
+          <div className="flex items-center gap-4">
+            <a href="/mentions-legales" className="text-xs text-white/20 hover:text-white/50 transition-colors">
+              Mentions légales
+            </a>
+            <span className="text-white/10">|</span>
+            <a href="/confidentialite" className="text-xs text-white/20 hover:text-white/50 transition-colors">
+              Confidentialité
+            </a>
+            <span className="text-white/10">|</span>
+            <a href="#" className="flex items-center gap-1.5 text-xs text-white/20 hover:text-white/50 transition-colors">
+              Retour en haut <ArrowUp className="h-3 w-3" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

@@ -76,8 +76,8 @@ export default function About() {
                 {[
                   { icon: GraduationCap, text: "Bac Pro TFCA" },
                   { icon: Shield, text: "Garantie décennale" },
+                  { icon: CheckCircle, text: "Attestation fluides frigorigènes" },
                   { icon: MapPin, text: "Bordeaux Métropole" },
-                  { icon: CheckCircle, text: "SIRET vérifiable" },
                 ].map((c) => {
                   const Icon = c.icon;
                   return (
