@@ -94,7 +94,7 @@ export default function Contact() {
                   </div>
                   <div className="flex items-center gap-3">
                     <Mail className="h-4 w-4 text-white/50 shrink-0" />
-                    <a href="mailto:occlim@outlook.com" className="hover:text-white transition-colors">occlim@outlook.com</a>
+                    <a href="mailto:contact@occlim.fr" className="hover:text-white transition-colors">contact@occlim.fr</a>
                   </div>
                   <div className="flex items-center gap-3">
                     <MapPin className="h-4 w-4 text-white/50 shrink-0" />

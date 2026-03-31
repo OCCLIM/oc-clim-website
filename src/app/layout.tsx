@@ -17,18 +17,23 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://occlim.fr"),
   title: "OC CLIM — Climatisation & Pompes à Chaleur | Bordeaux & Cestas (33)",
   description:
-    "OC CLIM, votre expert en installation, entretien et dépannage de climatisation et pompes à chaleur à Bordeaux, Cestas et Gironde. Devis gratuit, garantie décennale.",
+    "OC CLIM, votre expert en installation, entretien et dépannage de climatisation et pompes à chaleur à Bordeaux, Cestas et Gironde. Devis gratuit, garantie décennale, 7j/7.",
   keywords:
-    "climatisation Bordeaux, pompe à chaleur Cestas, installation clim 33, entretien climatisation Gironde, OC CLIM, Can Oruc, dépannage clim, PAC air eau",
+    "climatisation Bordeaux, pompe à chaleur Cestas, installation clim 33, entretien climatisation Gironde, OC CLIM, Can Oruc, dépannage clim, PAC air eau, PAC air air, gainable Bordeaux",
   openGraph: {
     title: "OC CLIM — Climatisation & Pompes à Chaleur | Bordeaux",
     description:
-      "Expert en climatisation et pompes à chaleur à Bordeaux et Cestas. Installation, entretien, dépannage. Devis gratuit.",
+      "Expert en climatisation et pompes à chaleur à Bordeaux et Cestas. Installation, entretien, dépannage. Devis gratuit, 7j/7.",
     type: "website",
     locale: "fr_FR",
     siteName: "OC CLIM",
+    url: "https://occlim.fr",
+  },
+  alternates: {
+    canonical: "https://occlim.fr",
   },
   robots: "index, follow",
 };

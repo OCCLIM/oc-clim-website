@@ -65,7 +65,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 shrink-0 text-white/25" />
-                <a href="mailto:occlim@outlook.com" className="hover:text-white transition-colors">occlim@outlook.com</a>
+                <a href="mailto:contact@occlim.fr" className="hover:text-white transition-colors">contact@occlim.fr</a>
               </li>
               <li className="flex items-center gap-2.5">
                 <MapPin className="h-4 w-4 shrink-0 text-white/25" />
@@ -77,7 +77,7 @@ export default function Footer() {
               </li>
             </ul>
             <p className="mt-4 text-xs text-white/20">
-              SIRET : 987 418 076 00012 · Garantie décennale
+              SIRET : 987 418 076 00012 · Garantie décennale MMA
             </p>
           </div>
         </div>

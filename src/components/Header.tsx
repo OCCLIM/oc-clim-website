@@ -46,14 +46,14 @@ export default function Header() {
           {/* Logo - toujours visible avec un fond blanc rond sur le hero noir */}
           <Link href="/" className="flex items-center gap-3">
             <div className={`flex items-center justify-center rounded-full transition-all duration-300 ${
-              showWhiteBg ? "h-14 w-14" : "h-14 w-14 bg-white shadow-md"
+              showWhiteBg ? "h-11 w-11 sm:h-14 sm:w-14" : "h-11 w-11 sm:h-14 sm:w-14 bg-white shadow-md"
             }`}>
               <Image
                 src="/images/logo.png"
                 alt="OC CLIM"
                 width={56}
                 height={56}
-                className="h-14 w-14"
+                className="h-11 w-11 sm:h-14 sm:w-14"
                 priority
               />
             </div>

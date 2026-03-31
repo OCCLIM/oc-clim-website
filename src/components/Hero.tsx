@@ -195,8 +195,8 @@ export default function Hero() {
 
               {/* Sous-titre */}
               <p className="mt-5 sm:mt-7 max-w-xl text-[15px] sm:text-lg text-white/50 leading-relaxed animate-fade-in-up delay-200">
-                <span className="hidden sm:inline">Installation, entretien et dépannage de systèmes climatiques. Un seul interlocuteur, du devis à la mise en service.</span>
-                <span className="sm:hidden">Installation, entretien et dépannage de climatisation. Du devis à la mise en service.</span>
+                <span className="hidden sm:inline">C'est Can qui se déplace, qui installe et qui assure le suivi. Pas de sous-traitance, pas d'intermédiaire — disponible 7j/7, du devis à la mise en service.</span>
+                <span className="sm:hidden">Can se déplace, installe et assure le suivi. Pas de sous-traitance — disponible 7j/7.</span>
               </p>
 
               {/* Stats */}

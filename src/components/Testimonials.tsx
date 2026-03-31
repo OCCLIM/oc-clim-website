@@ -75,6 +75,19 @@ export default function Testimonials() {
           ))}
         </div>
 
+        <ScrollReveal delay={500}>
+          <div className="text-center mt-10">
+            <a
+              href="https://g.page/r/occlim/review"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-white/30 hover:text-white/60 transition-colors"
+            >
+              <Star className="h-3.5 w-3.5 text-amber-400 fill-amber-400" />
+              Voir tous nos avis sur Google
+            </a>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

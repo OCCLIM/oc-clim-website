@@ -33,7 +33,7 @@ export default function Confidentialite() {
               Le responsable du traitement des données personnelles est :<br />
               <strong>OC CLIM</strong> — Can Oruc<br />
               SIRET : 987 418 076 00012<br />
-              Email : <a href="mailto:occlim@outlook.com" className="underline">occlim@outlook.com</a><br />
+              Email : <a href="mailto:contact@occlim.fr" className="underline">contact@occlim.fr</a><br />
               Téléphone : 07 67 11 75 30
             </p>
           </section>
@@ -101,7 +101,7 @@ export default function Confidentialite() {
             </ul>
             <p>
               Pour exercer vos droits, contactez-nous à :{" "}
-              <a href="mailto:occlim@outlook.com" className="underline">occlim@outlook.com</a>
+              <a href="mailto:contact@occlim.fr" className="underline">contact@occlim.fr</a>
             </p>
             <p>
               Vous pouvez également déposer une réclamation auprès de la{" "}

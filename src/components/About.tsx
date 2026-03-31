@@ -91,6 +91,13 @@ export default function About() {
                 })}
               </div>
 
+              {/* SIRET vérifiable */}
+              <div className="mt-6 pt-6 border-t border-[#eee]">
+                <p className="text-xs text-[#999] leading-relaxed">
+                  SIRET : <a href="https://www.societe.com/societe/oc-clim-987418076.html" target="_blank" rel="noopener noreferrer" className="underline hover:text-[#333338] transition-colors">987 418 076 00012</a> · Assurance décennale : MMA
+                </p>
+              </div>
+
               {/* Brands - now in dedicated BrandMarquee section */}
             </div>
           </ScrollReveal>

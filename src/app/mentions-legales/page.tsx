@@ -32,7 +32,7 @@ export default function MentionsLegales() {
               SIRET : 987 418 076 00012<br />
               Adresse : Cestas (33610), Gironde, France<br />
               Téléphone : 07 67 11 75 30<br />
-              Email : occlim@outlook.com
+              Email : contact@occlim.fr
             </p>
           </section>
 
@@ -68,7 +68,7 @@ export default function MentionsLegales() {
               Les données personnelles collectées via le formulaire de contact (nom, téléphone, email, message)
               sont utilisées uniquement pour répondre à votre demande. Elles ne sont ni vendues ni cédées à des tiers.
               Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données.
-              Pour exercer ce droit, contactez-nous à : <a href="mailto:occlim@outlook.com" className="underline">occlim@outlook.com</a>.
+              Pour exercer ce droit, contactez-nous à : <a href="mailto:contact@occlim.fr" className="underline">contact@occlim.fr</a>.
             </p>
             <p>
               Pour en savoir plus, consultez notre{" "}
